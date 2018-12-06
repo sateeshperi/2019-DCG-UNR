@@ -11,7 +11,7 @@ Twitter hash tag: #DCUNR
 
 Notes from the course: 
 
-[Hackmd.io]()
+[Hackmd.io](https://hackmd.io/7MqCeQo3RnqMDiZMZBXi7Q#)
 
 ## Instructors
 
