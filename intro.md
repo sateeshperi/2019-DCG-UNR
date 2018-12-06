@@ -12,4 +12,4 @@ Hi everyone and thank you for joining us for the first-ever Data Carpentry works
 
 ![Sateesh Peri](https://github.com/sateeshperi/sateeshperi.github.io/blob/master/files/SateeshPeri2.png) 
 * __Sateesh Peri__ - PhD Candidate at UNR
-    * Jane spends her time between the lab, where she samples embryonic _Fundulus heteroclitus_ exposed to oil and creating custom computational pipelines to analize differential expression to understand the impacts of oil on trans-generational responses.
+    * Sateesh spends his time creating custom computational pipelines to analize differential expression to understand the role of Long non-coding RNA in spermatogenesis.
