@@ -10,6 +10,6 @@ Hi everyone and thank you for joining us for the first-ever Data Carpentry works
     * Currently he is working on developing computational tools for analyzing time-series population genomic data to understand the effects of population collapse in Pacific herring (_Clupea pallasii_), as well as assisting with the transcriptomic assessment of responses of herring to early developmental co-exposure of oil and viral challenge.
 
 
-![Sateesh Peri](https://github.com/sateeshperi/sateeshperi.github.io/blob/master/files/SateeshPeri.jpg) 
+![Sateesh Peri](https://github.com/sateeshperi/sateeshperi.github.io/blob/master/files/SateeshPeri2.png) 
 * __Sateesh Peri__ - PhD Candidate at UNR
     * Jane spends her time between the lab, where she samples embryonic _Fundulus heteroclitus_ exposed to oil and creating custom computational pipelines to analize differential expression to understand the impacts of oil on trans-generational responses.
