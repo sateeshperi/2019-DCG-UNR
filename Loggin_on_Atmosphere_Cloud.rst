@@ -86,8 +86,8 @@ First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ app
 .. Note::
 
   It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.
-
-
+  
+  
 .. |atmo-1| image:: ./img/atmo-1.png
 .. |atmo-2| image:: ./img/atmo-2.png
 .. |atmo-3| image:: ./img/atmo-3.png
@@ -101,3 +101,47 @@ First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ app
 .. |atmo-11| image:: ./img/atmo-11.png
 .. |atmo-12| image:: ./img/atmo-12.png
 
+5. **Setting up Secure Login - SSH**
+
+5.1. **Concerning Keys**
+
+	Cryptographic keys are a convenient and secure way to authenticate without having to use passwords. They consist of a pair of files called the public and private keys: the public part can be shared with whoever you’d like to authenticate with (in our case, CyVerse Atmosphere!), and the private part is kept “secret” on your machine. Things that are encrypted with the public key can be be decrypted with the private key, but it is computationally intractable (ie, it would take on the order of thousands of years) to determine a private key from a public key. You can read more about it [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
+
+5.2. **Step One—Create the RSA Key Pair**
+
+The first step is to create the key pair on your computer:
+> $ ssh-keygen -t rsa
+
+**Step Two—Store the Keys and Passphrase**
+
+Once you have entered the Gen Key command, you will get a few more questions:
+
+> $ Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+
+You can press enter here, saving the file to the user home (in this case, my example user is called demo).
+
+> $ Enter passphrase (empty for no passphrase):
+
+It's up to you whether you want to use a passphrase though we recommend NOT to!.
+
+The public key is now located in /home/demo/.ssh/id_rsa.pub. The private key (identification) is now located in /home/demo/.ssh/id_rsa
+
+**Step Three—Copy the Public Key**
+
+Once the key pair is generated, it's time to place the public key on the server that we want to use.
+
+> $ cat ~/.ssh/id_rsa.pub
+
+Copy all of the text that constitutes your public key and we will place it our Atmosphere accounts.
+
+**Step four-Deposit key on Atmosphere**
+
+You are now ready to deposit your generated public key onto your Atmosphere account, to gain secure login each time you build and use an instance on Atmosphere.
+
+> Click on your username on the Atmosphere page and navigate to 'Settings' page
+> Scroll down to the advanced section and click on 'Show More'
+> In the 'SSH Configuration' section, click on the '+' sign and paste your public key generated earlier and give this key a name
+
+Great Job! now you can securely login to all the instances you launch on Atmosphere without having to type a password.  
+
+You s
