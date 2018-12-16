@@ -10,10 +10,8 @@ Table of contents
    code_of_conduct.md
 
    intro.md
-
-   jetstream/boot.md
    
-   jetstream/login.md
+   Loggin_on_Atmosphere_Cloud.rst
 
    jetstream-bioconda-config.md
 
