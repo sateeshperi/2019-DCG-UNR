@@ -1,4 +1,4 @@
-# Jetstream: working with bioconda.
+# Working with Bioconda.
 
 Learning objectives:
 * learn what bioconda is
