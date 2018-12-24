@@ -178,7 +178,7 @@ You can also view this output [here](_static/multiqc_report.html)
 As an alternative to viewing the files on the Rstudio server, we can secure copy (scp) these files to our own laptops, and view them from there.
 ```
 mkdir ~/Desktop/nema_fastqc  # make a directory for these files
-scp username@ip.address:/work/quality/*html ~/Desktop/nema_fastqc
+scp username@ip.address:~/work/quality/*.html ~/Desktop/nema_fastqc
 ```
 where the first argument after `scp` is your login and path for the files we want to copy (from the jetstream instance), and the second argument is the path to place the files on our own computer.
 
