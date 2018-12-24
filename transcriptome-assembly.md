@@ -24,7 +24,7 @@ cd ..
 mkdir assembly
 cd assembly
 
-ln -fs ${PROJECT}/quality/*.qc.fq.gz .
+ln -fs ${PROJECT}/trim/*.qc.fq.gz .
 ls
 ```
 
