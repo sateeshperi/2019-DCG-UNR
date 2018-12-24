@@ -12,12 +12,12 @@ for everybody.
 Need Help?
 ----------
 
-You can reach Dr. Elias Oziolor, at [emoziolor@ucdavis.edu](mailto:emoziolor@ucdavis.edu).  You can also talk to
+You can reach Sateesh Peri, at [perisateesh@nevada.unr.edu](mailto:perisateesh@nevada.unr.edu).  You can also talk to
 any of the instructors or TAs if you need immediate help, or (in an
 emergency) call 911.
 
-Titus Brown, [ctbrown@ucdavis.edu](mailto:ctbrown@ucdavis.edu) is the person to contact if
-Elias is not available.
+Richard Tillett, [rltillett@unr.edu](mailto:rltillett@unr.edu) is the person to contact if
+Sateesh is not available.
 
 The Quick Version
 -----------------
@@ -55,7 +55,7 @@ or have any other concerns, please contact a member of workshop
 staff immediately.
 
 Workshop instructors and TAs will be happy to help participants
-contact KBS security or local law enforcement, provide escorts, or
+contact UNR security or local law enforcement, provide escorts, or
 otherwise assist those experiencing harassment to feel safe for the
 duration of the workshop. We value your attendance.
 
