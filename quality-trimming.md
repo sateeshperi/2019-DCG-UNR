@@ -155,6 +155,8 @@ If you would like to aggregate all of your fastqc reports across many samples, [
 
 Run MultiQC:
 
+{NEEDS INSTALL}
+
 ```
 multiqc .
 ```
