@@ -42,7 +42,7 @@ Trinity works both with paired-end reads as well as single-end reads (including 
 So let's run the assembler as follows:
 
 ```
-time Trinity --seqType fq --max_memory 30G --CPU 10 --left left.fq.gz --right right.fq.gz --output nema_trinity
+time Trinity --seqType fq --max_memory 15G --CPU 4 --left left.fq.gz --right right.fq.gz --output nema_trinity
 ```
 
 (This will take about 5 minutes)
