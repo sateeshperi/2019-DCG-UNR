@@ -156,7 +156,7 @@ Copy that IP address and return to your computer's terminal.
 
 {insert image here}
 
-After the **Status** AND **Activituy** indicators of your instance have both gone to **Active** you can return to your terminal and type:
+After the **Status** AND **Activity** indicators of your instance have both gone to **Active** you can return to your terminal and type:
 
 ```
 ssh your_CyVerseusername@ip_address
