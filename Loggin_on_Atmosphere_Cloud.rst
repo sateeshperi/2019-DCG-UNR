@@ -144,3 +144,27 @@ You are now ready to deposit your generated public key onto your Atmosphere acco
 
 Great Job! now you can securely login to all the instances you launch on Atmosphere without having to type a password.  
 
+**Step five-Log in from your computer's terminal**
+
+Now that you have set up your public key with CyVerse, you can open you terminal (if you are using Windows OS, please follow our log in guidelines by MobaXterm to open a Unix Based terminal or if you have already installed Ubuntu terminal through Developer mode, feel free to use that).
+
+Next, click on the instance you just started in Atmosphere. This will open a page with description of that instance, including an IP address for it:
+
+{insert image later}
+
+Copy that IP address and return to your computer's terminal.
+
+{insert image here}
+
+After the **Status** AND **Activity** indicators of your instance have both gone to **Active** you can return to your terminal and type:
+
+```
+ssh your_CyVerseusername@ip_address
+```
+
+This should log you into CyVerse and you should see a screen like this:
+
+{insert image here}
+=======
+
+
