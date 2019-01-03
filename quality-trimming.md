@@ -1,10 +1,10 @@
 # Short read quality and trimming
 
-You should now be logged into your Jetstream computer!  You should see
+You should now be logged into your Atmosphere computer!  You should see
 something like this
 
 ```
-dibbears@js-168-17:~$ 
+sateeshp@vm142-35:~$ 
 ```
 
 ## Data source
@@ -180,7 +180,7 @@ As an alternative to viewing the files on the Rstudio server, we can secure copy
 mkdir ~/Desktop/nema_fastqc  # make a directory for these files
 scp username@ip.address:~/work/quality/*.html ~/Desktop/nema_fastqc
 ```
-where the first argument after `scp` is your login and path for the files we want to copy (from the jetstream instance), and the second argument is the path to place the files on our own computer.
+where the first argument after `scp` is your login and path for the files we want to copy (from the atmosphere instance), and the second argument is the path to place the files on our own computer.
 
 If you are unable to use scp though a terminal output, you can see the fastqc html output [here](_static/6Hour_CGATGT_L002_R2_003.extract_fastqc.html)
 
