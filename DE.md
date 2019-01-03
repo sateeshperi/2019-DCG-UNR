@@ -221,8 +221,8 @@ hr <- hclust(as.dist(1-cor(t(d), method="pearson")), method="complete")
 mycl <- cutree(hr, h=max(hr$height/1.5))
 clusterCols <- rainbow(length(unique(mycl)))
 myClusterSideBar <- clusterCols[mycl]
-myheatcol <- greenred(75)
-heatmap.2(d, main="6 hr vs. 0 hr (padj<0.05)", 
+myheatcol <- colorRampPalette(c("red", "green"))(n = 75)
+heatmap(d, main="6 hr vs. 0 hr (padj<0.05)", 
           Rowv=as.dendrogram(hr),
           cexRow=0.75,cexCol=0.8,srtCol= 90,
           adjCol = c(NA,0),offsetCol=2.5, 
