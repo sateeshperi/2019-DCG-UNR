@@ -11,14 +11,6 @@ References:
 
 [DE lecture by Jane Khudyakov, July 2017](https://rnaseq-workshop-2017.readthedocs.io/en/latest/_static/Jane_differential_expression.pdf)
 
-## RUN THIS DURING LUNCH BREAK
-
-```
-cd ~
-curl -O -L https://github.com/ngs-docs/angus/raw/2017/_static/install-deseq2.R
-sudo Rscript --no-save install-deseq2.R
-```
-
 ## Move salmon output quant files to their own directory
 
 RStudio only recognizes files in home `~/`. So, soft link files there:
