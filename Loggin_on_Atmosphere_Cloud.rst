@@ -144,3 +144,4 @@ You are now ready to deposit your generated public key onto your Atmosphere acco
 
 Great Job! now you can securely login to all the instances you launch on Atmosphere without having to type a password.  
 
+You s
