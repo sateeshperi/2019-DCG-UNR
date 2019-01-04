@@ -115,19 +115,19 @@ You are now ready to deposit your generated public key onto your Atmosphere acco
 
 9. Click on your username on the Atmosphere page and navigate to 'Settings' page
 
-|atmo_10|
+|atmo-10|
 
 10. Scroll down to the advanced section and click on 'Show More'
 
-|atmo_11|
+|atmo-11|
 
 11. In the 'SSH Configuration' section, click on the '+' sign 
 
-|atmo_12|
+|atmo-12|
 
 12. Paste your public key generated earlier and give this key a name
 
-|atmo_13|
+|atmo-13|
 
 - You can now securely login to all the instances you launch on Atmosphere without having to type a password each-time you login.  
 
@@ -146,25 +146,25 @@ You are now ready to deposit your generated public key onto your Atmosphere acco
 ```
 ssh your_CyVerseusername@ip_address
 ```
-|atmo_14|
+|atmo-14|
 
 - This should log you into CyVerse and you should see a screen like this:
 
-|atmo_15|
+|atmo-15|
 
 - Enter 'Yes' and the keys are matched and secure login with crytographic keys has been established and should see the following on your terminal.
 
-|atmo_16|
+|atmo-16|
 
 16. **Deleting your instance**
 
 - To completely remove your instance, you can select the "Delete" button from the instance details page.
 
-|atmo_17|
+|atmo-17|
 
 - This will open up a dialogue window. Select the "Yes, delete this instance" button.
 
-|atmo_18|
+|atmo-18|
 
 - It may take Atmosphere a few minutes to process your request. The instance should disappear from the project when it has been successfully deleted.
 
