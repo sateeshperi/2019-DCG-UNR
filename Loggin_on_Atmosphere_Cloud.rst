@@ -189,4 +189,5 @@ ssh your_CyVerseusername@ip_address
 .. |atmo-15| image:: ./img/atmo_15.png
 .. |atmo-16| image:: ./img/atmo_16.png
 .. |atmo-17| image:: ./img/atmo_17.png
+.. |atmo-18| image:: ./img/atmo_18.png
 .. |atmo-img| image:: ./img/atmo_img.png
