@@ -88,18 +88,18 @@ First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ app
   It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.
   
   
-.. |atmo-1| image:: ./img/atmo-1.png
-.. |atmo-2| image:: ./img/atmo-2.png
-.. |atmo-3| image:: ./img/atmo-3.png
-.. |atmo-4| image:: ./img/atmo-4.png
-.. |atmo-5| image:: ./img/atmo-5.png
-.. |atmo-6| image:: ./img/atmo-6.png
-.. |atmo-7| image:: ./img/atmo-7.png
-.. |atmo-8| image:: ./img/atmo-8.png
-.. |atmo-9| image:: ./img/atmo-9.png
-.. |atmo-10| image:: ./img/atmo-10.png
-.. |atmo-11| image:: ./img/atmo-11.png
-.. |atmo-12| image:: ./img/atmo-12.png
+.. |atmo-1| image:: ./img/atmo_1.png
+.. |atmo-2| image:: ./img/atmo_2.png
+.. |atmo-3| image:: ./img/atmo_3.png
+.. |atmo-4| image:: ./img/atmo_4.png
+.. |atmo-5| image:: ./img/atmo_5.png
+.. |atmo-6| image:: ./img/atmo_6.png
+.. |atmo-7| image:: ./img/atmo_7.png
+.. |atmo-8| image:: ./img/atmo_8.png
+.. |atmo-9| image:: ./img/atmo_9.png
+.. |atmo-10| image:: ./img/atmo_10.png
+.. |atmo-11| image:: ./img/atmo_11.png
+.. |atmo-12| image:: ./img/atmo_12.png
 
 5. **Setting up Secure Login - SSH**
 
