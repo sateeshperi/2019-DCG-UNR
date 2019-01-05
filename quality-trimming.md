@@ -6,6 +6,14 @@ something like this
 ```
 sateeshp@vm142-35:~$ 
 ```
+**Note:** If you haven't added conda to your PATH yet, please do so by running the following:
+```
+echo export PATH=$PATH:/opt/miniconda3/bin >> ~/.bashrc
+```
+Then, run the following command (or start a new terminal session) in order to activate the conda environment:
+```
+source ~/.bashrc
+```
 
 ## Data source
 
