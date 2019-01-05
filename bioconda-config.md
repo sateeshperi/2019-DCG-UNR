@@ -45,19 +45,11 @@ conda config --add channels conda-forge
 conda config --add channels bioconda
 ```
 
-Try installing something:
+Try running a program pre-installed on this instance:
 
 ```
-conda install sourmash
+fastqc
 ```
-
-and running it --
-```
-sourmash
-```
-will produce some output. (We'll tell you more about sourmash later.)
-
-yay!
 
 ## Using conda
 
