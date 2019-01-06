@@ -12,4 +12,4 @@ Hi everyone and thank you for joining us for the first-ever Data Carpentry works
 
 ![Sateesh Peri](https://github.com/sateeshperi/sateeshperi.github.io/blob/master/files/SateeshPeri2.png) 
 * __Sateesh Peri__ - PhD Candidate at UNR
-    * Sateesh spends his time creating custom computational pipelines to analize differential expression to understand the role of Long non-coding RNA in spermatogenesis.
+    * Sateesh spends his time creating custom computational pipelines to analyze differential expression of Long non-coding RNAs in spermatogenesis.
