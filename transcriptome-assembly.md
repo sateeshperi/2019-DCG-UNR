@@ -20,7 +20,7 @@ We will be using the same set of *Nematostella vectensis* mRNAseq reads that we 
 The following commands will create a new folder `assembly` and link the trimmed data we prepared earlier in the newly created folder:
 
 ```
-cd ..
+cd ~/work
 mkdir assembly
 cd assembly
 
