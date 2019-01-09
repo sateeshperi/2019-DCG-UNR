@@ -47,7 +47,7 @@ First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ app
 
 |atmo-6|
 
-6. Naviagate to "Show All" tab and Search for "DC_Genomics_UNR_2019"; click the "DC_Genomics_UNR_2019" image.
+6. Naviagate to "Show All" tab and Search for "DCG-UNR-RNAseq"; click the "DCG-UNR-RNAseq" image.
 
 |atmo-img|
 
