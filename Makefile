@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = 2018-setacna-rnaseq
+SPHINXPROJ    = 2019-UNR-omics
 SOURCEDIR     = .
 BUILDDIR      = _build
 
