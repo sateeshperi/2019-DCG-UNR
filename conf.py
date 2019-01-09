@@ -23,9 +23,9 @@ import guzzle_sphinx_theme
 
 # -- Project information -----------------------------------------------------
 
-project = '2018-setacna-rnaseq'
-copyright = '2018, Elias Oziolor'
-author = 'Elias Oziolor'
+project = '2019-UNR-omics'
+copyright = '2019, Sateesh Peri'
+author = 'Sateesh Peri'
 
 # The short X.Y version
 version = ''
@@ -107,7 +107,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '2018-setacna-rnaseqdoc'
+htmlhelp_basename = '2019-UNR-omics-doc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -134,8 +134,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, '2018-setacna-rnaseq.tex', '2018-setacna-rnaseq Documentation',
-     'Elias Oziolor', 'manual'),
+    (master_doc, '2019-UNR-omics.tex', '2019-UNR-omics Documentation',
+     'Sateesh Peri', 'manual'),
 ]
 
 
@@ -144,7 +144,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, '2018-setacna-rnaseq', '2018-setacna-rnaseq Documentation',
+    (master_doc, '2019-UNR-omics', '2019-UNR-omics Documentation',
      [author], 1)
 ]
 
@@ -155,8 +155,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, '2018-setacna-rnaseq', '2018-setacna-rnaseq Documentation',
-     author, '2018-setacna-rnaseq', 'One line description of project.',
+    (master_doc, '2019-UNR-omics', '2019-UNR-omics Documentation',
+     author, '2019-UNR-omics', 'One line description of project.',
      'Miscellaneous'),
 ]
 
