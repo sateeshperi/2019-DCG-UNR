@@ -64,4 +64,4 @@ This workshop incorporates materials from the [Analysis of Next Generation Seque
 * Two other nonmodel RNAseq workshops: [DIBSI 2017](https://dibsi-rnaseq.readthedocs.io/en/latest/) and [SIO-BUG 2017](https://rnaseq-workshop-2017.readthedocs.io/en/latest/index.html)
 * [Backup files](backup.html), if something goes wrong
 * If you find that you would like more practice working on the command line, here is a [command-line bootcamp](http://rik.smith-unna.com/command_line_bootcamp/?id=yk822u2rpo). In addition, BASH training videos are freely available through the [NH-INBRE program, the UNH Bioinformatics Core facility](http://nhinbre.org/bioinformatics-modules/).
-* Source documents for these lessons can be found [on GitHub](https://github.com/WhiteheadLab/2018-setacna-rnaseq/).
+* Source documents for these lessons can be found on [GitHub](https://github.com/WhiteheadLab/2018-setacna-rnaseq/).
