@@ -13,8 +13,6 @@ Table of contents
    
    Loggin_on_Atmosphere_Cloud.rst
 
-   jetstream-bioconda-config.md
-
    bash_lesson.md
 
    quality-trimming.md
