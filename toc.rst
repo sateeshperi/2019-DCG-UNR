@@ -16,6 +16,8 @@ Table of contents
    bash_lesson.md
 
    quality-trimming.md
+   
+   git_lesson.md
 
    transcriptome-assembly.md
 
