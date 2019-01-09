@@ -136,17 +136,17 @@ Once you have set up a profile, it's time to create a repository in github, whic
 
 Go to your profile and add click the __plus__ button.
 
-<img src="https://i.imgur.com/wGFfeSd.png" width="1200" height="800">
+<img src="https://i.imgur.com/wGFfeSd.png" width="1200" height="700">
 
 Then fill out the necessary information for your repository to be distinct and recognizeable.
 
-![](https://i.imgur.com/MJszSW8.png width="1200" height="800")
+<img src="https://i.imgur.com/MJszSW8.png" width="1200" height="700">
 
 When you've created the repository, GitHub will tell you what you need to do in order to sync your two repositories into one.
 
 Only use the last two lines, because you've already committed changes!
 
-![](https://i.imgur.com/HZNr7XL.png =1200x800)
+<img src="https://i.imgur.com/HZNr7XL.png" width="1200" height="700">
 
 Once you execute those two lines in your terminal, you should be able to see a reflection of your local repository online.
 
