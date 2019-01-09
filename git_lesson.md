@@ -136,7 +136,7 @@ Once you have set up a profile, it's time to create a repository in github, whic
 
 Go to your profile and add click the __plus__ button.
 
-<img src="https://i.imgur.com/wGFfeSd.png" width="1200" height="800")
+<img src="https://i.imgur.com/wGFfeSd.png" width="1200" height="800">
 
 Then fill out the necessary information for your repository to be distinct and recognizeable.
 
