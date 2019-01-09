@@ -172,33 +172,33 @@ ssh your_CyVerseusername@ip_address
 
   It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.
   
-## On Windows
+17. **On Windows**
 
 For Windows, we first need to actually *install* a terminal.
 
-### Install mobaxterm
+18. Install mobaxterm
 
 First, download [mobaxterm home edition (portable)](http://mobaxterm.mobatek.net/download-home-edition.html)
 and run it.
 
-### Start a new session
+19. Start a new session
 
 
 
-### Fill in session settings
+20. Fill in session settings
 
 Fill in your "remote host," which will be the IP address from earlier. Then select
 "specify username" and enter your class group name (e.g. dibbears).
 
 
 
-### Specify the session key
+21. Specify the session key
 
 Copy the downloaded private file onto your primary hard disk (generally
 C:) and the put in the full path to it.
 
 
-### Click OK
+22. Click OK
 
 Victory!
 
