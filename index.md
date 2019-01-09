@@ -25,23 +25,37 @@ This workshop incorporates materials from the [Analysis of Next Generation Seque
 **Day-1**
  
  09:00-09:45am [Introduction and Genomics Workshop Overview](https://unr-omics.readthedocs.io/en/latest/intro.html) 
+ 
  09:45-10:30am [Introduction to CyVerse Atmosphere Cloud](https://unr-omics.readthedocs.io/en/latest/Loggin_on_Atmosphere_Cloud.html) 
+ 
  10:30-10:45am  Coffee/Tea break 
+ 
  10:45-12:00pm [BASH- Command Line for Genomics](https://unr-omics.readthedocs.io/en/latest/bash_lesson.html) 
+ 
  12:00-1:30pm  Lunch Break (lunch will be provided!) 
+ 
  01:30-2:45pm [BASH - continued & Bioconda](https://github.com/sateeshperi/2019-DCG-UNR/blob/master/bioconda-config.md)
+ 
  02:45-3:00pm  Coffee/Tea Break 
+ 
  03:00-4:00pm RNAseq overview and Trimming sequencing data(https://unr-omics.readthedocs.io/en/latest/quality-trimming.html)  
+ 
  04:00-5:00pm Version control with Github 
 
  **Day-2**
  
  09:00-10:30am [Transcriptome Assembly](https://unr-omics.readthedocs.io/en/latest/transcriptome-assembly.html)
+ 
  10:30-10:45am  Coffee/Tea Break 
+ 
  10:45-12:00pm  [Read Quantification](https://unr-omics.readthedocs.io/en/latest/rnaseq-quant.html) 
+ 
  12:00-1:30pm  Lunch Break (lunch will be provided!) 
+ 
  01:30-2:30pm  [Differential Expression](https://unr-omics.readthedocs.io/en/latest/DE.html)
+ 
  02:30-2:45pm  Coffee/Tea Break 
+ 
  02:45-5:00pm  Project Organization and Markdown 
 
 ## Other info
