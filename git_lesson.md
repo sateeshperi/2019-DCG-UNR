@@ -140,7 +140,7 @@ Go to your profile and add click the __plus__ button.
 
 Then fill out the necessary information for your repository to be distinct and recognizeable.
 
-![](https://i.imgur.com/MJszSW8.png =1200x800)
+![](https://i.imgur.com/MJszSW8.png width="1200" height="800")
 
 When you've created the repository, GitHub will tell you what you need to do in order to sync your two repositories into one.
 
