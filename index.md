@@ -40,7 +40,7 @@ This workshop incorporates materials from the [Analysis of Next Generation Seque
  
  03:00-4:00pm [RNAseq overview and Trimming sequencing data](https://unr-omics.readthedocs.io/en/latest/quality-trimming.html)  
  
- 04:00-5:00pm Version control with Github 
+ 04:00-5:00pm [Version control with Github](https://unr-omics.readthedocs.io/en/latest/git_lesson.html)
 
  **Day-2**
  
