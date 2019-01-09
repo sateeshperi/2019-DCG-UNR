@@ -34,11 +34,11 @@ This workshop incorporates materials from the [Analysis of Next Generation Seque
  
  12:00-1:30pm  Lunch Break (lunch will be provided!) 
  
- 01:30-2:45pm [BASH - continued & Bioconda](https://github.com/sateeshperi/2019-DCG-UNR/blob/master/bioconda-config.md)
+ 01:30-2:45pm [BASH - continued & Bioconda](https://unr-omics.readthedocs.io/en/latest/bioconda-config.md)
  
  02:45-3:00pm  Coffee/Tea Break 
  
- 03:00-4:00pm RNAseq overview and Trimming sequencing data(https://unr-omics.readthedocs.io/en/latest/quality-trimming.html)  
+ 03:00-4:00pm [RNAseq overview and Trimming sequencing data](https://unr-omics.readthedocs.io/en/latest/quality-trimming.html)  
  
  04:00-5:00pm Version control with Github 
 
