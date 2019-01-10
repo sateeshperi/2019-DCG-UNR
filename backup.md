@@ -1,6 +1,6 @@
 # Backup files
 
-If something happens and you are unable to create the files during a particular lesson, backup files we created are all found here on the image 'RNASeq_1DayWorkshop':
+If something happens and you are unable to create the files during a particular lesson, backup files we created are all found here on the image 'DCG-UNR-RNAseq':
 
 ```
 /opt/rnaseq/
