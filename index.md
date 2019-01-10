@@ -34,7 +34,7 @@ This workshop incorporates materials from the [Analysis of Next Generation Seque
  
  12:00-1:30pm  Lunch Break (lunch will be provided!) 
  
- 01:30-2:45pm [BASH - continued & Bioconda](https://unr-omics.readthedocs.io/en/latest/bioconda-config.md)
+ 01:30-2:45pm [BASH - continued & Bioconda](https://unr-omics.readthedocs.io/en/latest/bioconda-config.html)
  
  02:45-3:00pm  Coffee/Tea Break 
  
