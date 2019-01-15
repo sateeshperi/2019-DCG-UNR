@@ -9,7 +9,7 @@ the same operating system/computing environment.
 
 Below, we've provided screenshots of the whole process. You can click on them to zoom in. The important areas to fill in are highlighted.
 
-> **Note** Cyverse has good documentation on how to use Atmosphere resources which you can find [here](https://wiki.cyverse.org/wiki/display/atmman/About+Atmosphere)
+**Note** Cyverse has good documentation on how to use Atmosphere resources which you can find 'here <https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html>'
 
 First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ application and then click `login`
 
