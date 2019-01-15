@@ -4,6 +4,8 @@
 For the duration of this workshop, we will be accessing data and tools
 required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
 
+|cyverse_atmosphere|
+
 This is the first and last place in these lessons where it will matter if you are using PC, Mac, or Linux. After we connect, we will all be on
 the same operating system/computing environment.
 
@@ -197,7 +199,7 @@ Victory!
 
 
 
-  
+.. |cyverse_atmosphere| image:: ./img/cyverse_atmo.png  
 .. |atmo-1| image:: ./img/atmo_1.png
 .. |atmo-2| image:: ./img/atmo_2.png
 .. |atmo-3| image:: ./img/atmo_3.png
