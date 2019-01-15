@@ -183,20 +183,10 @@ and run it.
 
 19. Start a new session
 
-
-
 20. Fill in session settings
 
 Fill in your "remote host," which will be the IP address from earlier. Then select
-"specify username" and enter your class group name (e.g. dibbears).
-
-
-
-21. Specify the session key
-
-Copy the downloaded private file onto your primary hard disk (generally
-C:) and the put in the full path to it.
-
+"specify username" and enter your cyverse username.
 
 22. Click OK
 
