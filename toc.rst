@@ -14,6 +14,8 @@ Table of contents
    Loggin_on_Atmosphere_Cloud.rst
 
    bash_lesson.md
+   
+   bioconda-config.md
 
    quality-trimming.md
    
