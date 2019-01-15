@@ -17,6 +17,8 @@ It just works, and it's effin' magic!!
 
 ## What problems does conda (and therefore bioconda) solve?
 
+<img src="https://github.com/sateeshperi/2019-DCG-UNR/blob/master/img/soft_prob.png" width="900" height="600">
+
 Conda tracks installed packages and their versions.
 
 Conda makes sure that different installed packages don't have
