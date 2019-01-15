@@ -17,7 +17,7 @@ It just works, and it's effin' magic!!
 
 ## What problems does conda (and therefore bioconda) solve?
 
-<img src="2019-DCG-UNR/img/soft_prob.png" width="900" height="600">
+![soft_prob](/img/soft_prob.png)
 
 Conda tracks installed packages and their versions.
 
