@@ -79,7 +79,7 @@ You can use `conda search`, or you can use google, or you can go visit [the list
 This will save the list of **conda-installed** software you have in a particular
 environment to the file `packages.txt`:
 ```
-conda list --export packages.txt
+conda list --export > packages.txt
 ```
 (it will not record the software versions for software not installed by conda.)
 
