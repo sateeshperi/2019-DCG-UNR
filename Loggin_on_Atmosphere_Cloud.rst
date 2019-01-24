@@ -175,10 +175,14 @@ ssh your_CyVerseusername@ip_address
 .. Note::
 
   It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.
-  
+
+17. **Additional CyVerse Features**
+
+Access your instance through a web desktop version from your CyVerse account
 |atmo-19|
-|atmo-20|
-|atmo-21|
+
+Access Command-Line Directly from your CyVerse account
+atmo-20|
   
 17. **On Windows**
 
