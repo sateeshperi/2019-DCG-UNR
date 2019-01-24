@@ -182,7 +182,8 @@ Access your instance through a web desktop version from your CyVerse account
 |atmo-19|
 
 Access Command-Line Directly from your CyVerse account
-atmo-20|
+
+|atmo-20|
   
 17. **On Windows**
 
