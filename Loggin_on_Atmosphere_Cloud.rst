@@ -176,6 +176,10 @@ ssh your_CyVerseusername@ip_address
 
   It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.
   
+|atmo-19|
+|atmo-20|
+|atmo-21|
+  
 17. **On Windows**
 
 For Windows, we first need to actually *install* a terminal.
@@ -219,3 +223,6 @@ Victory!
 .. |atmo-17| image:: ./img/atmo_17.png
 .. |atmo-18| image:: ./img/atmo_18.png
 .. |atmo-img| image:: ./img/atmo_img.png
+.. |atmo-19| image:: ./img/atmo_19.png
+.. |atmo-20| image:: ./img/atmo_20.png
+.. |atmo-21| image:: ./img/atmo_21.png
