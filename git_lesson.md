@@ -1,11 +1,15 @@
 GitHub: How not to lose your entire analysis!
 ===
 
-## What is Git and why use it?
+## Why Version Control?
 
 Version control is essential in creating any project that  takes longer than 5 minutes to complete. Even if your memory is longer than 5 minutes, next month you are not likely to be able to retrace your steps.
 
 Version control will allow you to back up every point at which you analysis is standing, provided you actively identify those points yourself. Imagine that every time you press the save key on a word document, every change between the last time you saveed and now was saved in a different version of the document. This way, you're only viewing the final version of your text, but if you wanted to, you could go back and view all of the old versions.
+
+## What is Git and why use it?
+Git  is  the  open  source  distributed  version  control  system  that  facilitates  GitHub  activities  on  your  laptop  or 
+desktop.
 
 ![](https://i.imgur.com/Foktz0Z.gif)
 
@@ -13,7 +17,7 @@ When you are doing this yourself, this can get cumbersome, so let git do it for 
 
 ## Options in Git
 
-The name of the software you're running is __git__, and you can use commands in a similar fashion as what you've learning in __bash__. The syntax here is:
+The name of the software you're running is __git__, and you can use commands in a similar fashion as what you've learning in __bash__. The syntax of git commands is:
 
 ```
 git verb options
@@ -32,7 +36,7 @@ $ git config --global user.name "Elias Oziolor"
 $ git config --global user.email "emoziolor@ucdavis.edu"
 ```
 
-I told git who I am and where to find me. Make sure that this is the same e-mail address that you have or will open a __GitHub__ account with.
+I told git who I am and where to find me. Make sure that this is the same e-mail address that you have or will open a [__GitHub__](www.github.com) account with.
 
 ### Initiating a repository
 
@@ -43,11 +47,11 @@ cd ~/
 mkdir project
 ```
 
-__What is a repository__: A repository is the location, in which a set of files will be backed up. Use a single repository for each project.
+__What is a repository__: A Git repository is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. Use a single repository for each project.
 
 __Sample setup__: I like to include two folders in my repositories: 1) data; 2) scripts.
 
-To start a repository type the following in the folder which contains all other folders:
+To start a repository you'll use the git init command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new master branch. 
 
 ```
 git init
@@ -130,7 +134,7 @@ If you are wondering if all the files are truly staged for commit before you com
 
 Great! Now you have a repo with 2 commits. This is locally backed up now, but what if you lose your computer? This is another strong asset of git - it can back up files remotely.
 
-Let's go to GitHub.com and create a profile. If you have one already, take a second to admire your work.
+Let's go to [GitHub](www.github.com) and create a profile. If you have one already, take a second to admire your work.
 
 Once you have set up a profile, it's time to create a repository in github, which will then receive all the backups from the repository you created on your machine.
 
