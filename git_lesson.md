@@ -49,6 +49,7 @@ Once you've chosen a location for all of your work on this project, in our case 
 ```
 cd ~/
 mkdir project
+cd project/
 ```
 
 __What is a repository__: A Git repository is virtual storage for your project. It allows you to save versions of your code, which you can access when needed. Use a single repository for each project.
@@ -167,7 +168,13 @@ Every time you type:
 ```
 git push origin master
 ```
+**You will be prompted for your Github username and password at this point**
+
+> To avoid having to type your username and password each time you push/pull from your github repos, read about Secure Login here: https://help.github.com/articles/connecting-to-github-with-ssh/
+
+
 You will force git to back up all of your commits since the last time you __pushed__ to be backed up online. FOR FREE!
+
 
 ## Git-GitHub Overview
 
