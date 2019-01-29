@@ -171,6 +171,8 @@ git push origin master
 ```
 You will force git to back up all of your commits since the last time you __pushed__ to be backed up online. FOR FREE!
 
+## Git-GitHub Overview
+
 ![git_overview](/img/git_overview.png)
 
 ## Exploring Github
@@ -180,6 +182,13 @@ You will force git to back up all of your commits since the last time you __push
 
 ## Collaborating via GitHub
 
++ **GitHub Issues**
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. They’re kind of like email—except they can be shared and discussed with all.
+
+Read more about Mastering Issues on Github [here](https://guides.github.com/features/issues/)
+
++ **GitHub Pull-Requests**
+
 ![git_pr](/img/git_pr.png)
 
 Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
@@ -187,6 +196,15 @@ Pull requests let you tell others about changes you've pushed to a branch in a r
 ## Look at others' repositories:
 – Hadley Wickham (ggplot2): https://github.com/hadley
 – Yihui Xie (knitr): https://github.com/yihui
+
+## Host Websites & Blogs on GitHub
+
+GitHub Pages is an awesome feature that lets you host websites/blogs for you and your projects.
+
+**Hosted directly from your GitHub repository. Just edit, push, and your changes are live.**
+
+Read more about GitHub Pages [here](https://pages.github.com/)
+
 
 ## Suggestions for good Git Usage:
 
