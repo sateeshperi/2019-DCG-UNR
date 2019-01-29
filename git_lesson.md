@@ -5,15 +5,14 @@ GitHub: How not to lose your entire analysis!
 
 Version control is essential in creating any project that  takes longer than 5 minutes to complete. Even if your memory is longer than 5 minutes, next month you are not likely to be able to retrace your steps.
 
-Version control will allow you to back up every point at which you analysis is standing, provided you actively identify those points yourself. Imagine that every time you press the save key on a word document, every change between the last time you saveed and now was saved in a different version of the document. This way, you're only viewing the final version of your text, but if you wanted to, you could go back and view all of the old versions.
-
-## What is Git and why use it?
-Git  is  the  open  source  distributed  version  control  system  that  facilitates  GitHub  activities  on  your  laptop  or 
-desktop.
+Version control will allow you to back up every point at which your analysis is standing, provided you actively identify those points yourself. Imagine that every time you press the save key on a word document, every change between the last time you saved and now was saved in a different version of the document. This way, you're only viewing the final version of your text, but if you wanted to, you could go back and view all of the old versions.
 
 ![](https://i.imgur.com/Foktz0Z.gif)
 
-When you are doing this yourself, this can get cumbersome, so let git do it for you!
+**When you are doing this yourself, this can get cumbersome, so let git do it for you!**
+
+## What is Git and why use it?
+Git is an open source distributed version control system that facilitates GitHub activities on your laptop or desktop.
 
 ## Options in Git
 
@@ -47,11 +46,11 @@ cd ~/
 mkdir project
 ```
 
-__What is a repository__: A Git repository is a virtual storage of your project. It allows you to save versions of your code, which you can access when needed. Use a single repository for each project.
+__What is a repository__: A Git repository is virtual storage for your project. It allows you to save versions of your code, which you can access when needed. Use a single repository for each project.
 
 __Sample setup__: I like to include two folders in my repositories: 1) data; 2) scripts.
 
-To start a repository you'll use the git init command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new master branch. 
+To start a repository you'll use the **git init** command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new master branch. 
 
 ```
 git init
