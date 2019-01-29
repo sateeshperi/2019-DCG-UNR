@@ -5,6 +5,8 @@ GitHub: How not to lose your entire analysis!
 
 Version control is essential in creating any project that  takes longer than 5 minutes to complete. Even if your memory is longer than 5 minutes, next month you are not likely to be able to retrace your steps.
 
+![vc_logo](/img/vc_logo.png)
+
 Version control will allow you to back up every point at which your analysis is standing, provided you actively identify those points yourself. Imagine that every time you press the save key on a word document, every change between the last time you saved and now was saved in a different version of the document. This way, you're only viewing the final version of your text, but if you wanted to, you could go back and view all of the old versions.
 
 ![](https://i.imgur.com/Foktz0Z.gif)
@@ -12,7 +14,10 @@ Version control will allow you to back up every point at which your analysis is 
 **When you are doing this yourself, this can get cumbersome, so let git do it for you!**
 
 ## What is Git and why use it?
-Git is an open source distributed version control system that facilitates GitHub activities on your laptop or desktop.
+
+![git_logo](/img/git_logo.png)
+
+Git is an open source distributed version control system that facilitates GitHub activities on your laptop or desktop. Version control using Git is the most reasonable way to keep track of changes in code, manuscripts, presentations, and data analysis projects
 
 ## Options in Git
 
@@ -59,6 +64,8 @@ git init
 If you type the command ```ls -a```, you will be able to see that there is a .git file in the folder, which is not your git repository.
 
 ### Handling a repository
+
+![git_local](/img/git_local.png)
 
 Once you have a repository, let's start using it to back things up. There are several terms that you need to be familiar with to be comfortable with git:
 
@@ -129,13 +136,17 @@ git log
 
 If you are wondering if all the files are truly staged for commit before you commit them, you can check again with ```git status```
 
+![git_filestatus](/img/git_filestatus.png)
+
 ### Backing up your repositories with GitHub
 
 Great! Now you have a repo with 2 commits. This is locally backed up now, but what if you lose your computer? This is another strong asset of git - it can back up files remotely.
 
+**GitHub** is online virtual space to store Git repositories and provides an interface for exploring git repositories.
+
 Let's go to [GitHub](www.github.com) and create a profile. If you have one already, take a second to admire your work.
 
-Once you have set up a profile, it's time to create a repository in github, which will then receive all the backups from the repository you created on your machine.
+Once you have set up a profile, it's time to create a repository in github, which will then receive all the backups from the repository you created on your local machine.
 
 Go to your profile and add click the __plus__ button.
 
@@ -158,8 +169,24 @@ Every time you type:
 ```
 git push origin master
 ```
-
 You will force git to back up all of your commits since the last time you __pushed__ to be backed up online. FOR FREE!
+
+![git_overview](/img/git_overview.png)
+
+## Exploring Github
+
+![git_ex_history](/img/git_ex_history.png)
+![git_ex_commit](/img/git_ex_commit.png)
+
+## Collaborating via GitHub
+
+![git_pr](/img/git_pr.png)
+
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
+## Look at others' repositories:
+– Hadley Wickham (ggplot2): https://github.com/hadley
+– Yihui Xie (knitr): https://github.com/yihui
 
 ## Suggestions for good Git Usage:
 
