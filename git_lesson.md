@@ -136,8 +136,6 @@ git log
 
 If you are wondering if all the files are truly staged for commit before you commit them, you can check again with ```git status```
 
-![git_filestatus](/img/git_filestatus.png)
-
 ### Backing up your repositories with GitHub
 
 Great! Now you have a repo with 2 commits. This is locally backed up now, but what if you lose your computer? This is another strong asset of git - it can back up files remotely.
