@@ -63,7 +63,7 @@ We expect participants to follow these rules at workshop and workshop
 venues and workshop-related social events.
 
 This work is licensed under a `Creative Commons Attribution 3.0
-Unported License <http://confcodeofconduct.com/>`.
+Unported License <http://confcodeofconduct.com/>`__.
 
 ----
 

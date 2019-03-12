@@ -1,7 +1,8 @@
 **Logging onto Atmosphere Cloud**
 =================================
 
-For the duration of this workshop, we will be accessing data and tools required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
+For the duration of this workshop, we will be accessing data and tools
+required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
 
 |cyverse_atmosphere|
 
@@ -12,11 +13,7 @@ Below, we've provided screenshots of the whole process. You can click on them to
 
 **Note** Cyverse has good documentation on how to use Atmosphere resources which you can find 'here <https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html>'
 
-Register for free cyverse account here: https://user.cyverse.org/register
-
-In the services available section 'Request Access to Atmosphere' and submit application
-
-To access atmosphere, login here `Atmosphere <https://atmo.cyverse.org/application/images>`_ application and then click `login` (towards the right-upper corner)
+First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ application and then click `login`
 
 |atmo-1|
 
