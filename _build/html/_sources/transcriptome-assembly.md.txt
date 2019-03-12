@@ -1,130 +1,98 @@
-# Transcriptome assembly - some basics
+# De novo transcriptome assembly
 
 Learning objectives:
 
-* Learn what is Transcriptome assembly?
-* Different types of assemblies
+* What is transcriptome assembly?
 * How do assemblers work?
 * Checking the quality of assembly
-* Understanding Transcriptome assembly
+* Understanding transcriptome assembly
 
-In [variant calling](http://angus.readthedocs.io/en/2018/mapping-variant-calling.html), we mapped reads to a reference and looked systematically for differences.
+What if you are working with a species with no existing reference genome or transcriptome. How do you construct one?
 
-But what if you don't have a reference? How do you construct one?
+The answer is *de novo* assembly. The basic idea with *de novo* transcriptome assembly is you feed in your reads and you get out a bunch of *contigs* that represent transcripts, or stretches of RNA present in the reads that don't have any long repeats or much significant polymorphism. You run a  *de novo* transcriptome assembly program using the trimmed reads as input and get out a pile of assembled RNA.
 
-The answer is *de novo* assembly, and the basic idea is you feed in your reads and you get out a bunch of *contigs*, that represent stretches of RNA present in the reads that don't have any long repeats or much significant polymorphism.  Like everything else, the basic idea is that you run a program, feed in the reads, and get out a pile of assembled RNA.
+Trinity, one of the leading *de novo* transcriptome assemblers, was developed at the [Broad Institute](http://www.broadinstitute.org/) and the [Hebrew University of Jerusalem](http://www.cs.huji.ac.il/). We will be losely following steps from the [Eel pond protocol](https://eel-pond.readthedocs.io/en/latest) for our guide to doing RNA-seq assembly.
 
-Trinity, developed at the [Broad Institute](http://www.broadinstitute.org/) and the [Hebrew University of Jerusalem](http://www.cs.huji.ac.il/, represents a novel method for the efficient and robust de novo reconstruction of transcriptomes from RNA-seq data. We will be using the [eel-pond protocol](https://eel-pond.readthedocs.io/en/latest) for our guide to doing RNA-seq assembly.
+## Link in the trimmed data
 
-## Boot up a Jetstream
+We will be using the same set of *Nematostella vectensis* mRNAseq reads that we trimmed in the last lesson from [Tulin et al., 2013](https://evodevojournal.biomedcentral.com/articles/10.1186/2041-9139-4-16).
 
-[Boot an m1.medium Jetstream instance](jetstream/boot.md) and log in.
-
-## Install the TRINITY assembler
-
-The [Trinity assembler](https://www.ncbi.nlm.nih.gov/pubmed/21572440) can also install it through `conda`:
+The following commands will create a new folder `assembly` and link the trimmed data we prepared earlier in the newly created folder:
 
 ```
-conda install -y trinity 
-```
-
-## Change to a new working directory and link the original data
-
-We will be using the same data as before ([Schurch et al, 2016](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4878611/)), so the following commands will create a new folder `assembly` and link the trimmed data we prepared earlier in the newly created folder:
-
-```
-cd ~/
-mkdir -p assembly
+cd ~/work
+mkdir assembly
 cd assembly
 
-ln -fs ~/quality/*.qc.fq.gz .
+ln -fs ${PROJECT}/trim/*.qc.fq.gz .
 ls
 ```
 
-## Applying Digital Normalization
-
-In this section, we’ll apply [digital normalization](http://arxiv.org/abs/1203.4802) and [variable-coverage k-mer abundance trimming](https://peerj.com/preprints/890/) to the reads prior to assembly. This has the effect of reducing the computational cost of assembly [without negatively affecting the quality of the assembly](https://peerj.com/preprints/505/). Although the appropriate approach would be to use all 6 samples, for time consideration we will be using just the first one, i.e. ERR458493.qc.fq.gz
-
+Combine all fq into 2 files (left.fq and right.fq)
 ```
-normalize-by-median.py --ksize 20 --cutoff 20 -M 10G --savegraph normC20k20.ct --force_single ERR458493.qc.fq.gz
+cat *R1*.qc.fq.gz orphans.qc.fq.gz > left.fq.gz
+cat *R2*.qc.fq.gz > right.fq.gz
 ```
 
-This tools works mainly for paired-end reads, combined with a one file containing single-end reads. Given that all our samples are single end, we'll use the `--force_single` flag to force all reads to be considered as single-end. The parameter `--cutoff` indicates that when the median k-mer coverage level is above this number the read is not kept. Also note the `-M` parameter. This specifies how much memory diginorm should use, and should be less than the total memory on the computer you’re using. (See [choosing hash sizes for khmer for more information](http://khmer.readthedocs.io/en/v2.1.1/user/choosing-table-sizes.html).
-
-(This step should take about 2-3 minutes to complete)
-
-
-## Trim off likely erroneous k-mers
-
-Now, run through all the reads and trim off low-abundance parts of high-coverage reads
-
-```
-filter-abund.py --threads 4 --variable-coverage --normalize-to 18 normC20k20.ct *.keep
-```
-
-The parameter `--variable-coverage` requests that only trim low-abundance k-mers from sequences that have high coverage. The parameter `--normalize-to` bases the variable-coverage cutoff on this median k-mer abundance.
-
-(This step should take about 2-3 minutes to complete)
-
-### Run the assembler
-
+## Run the assembler
 
 Trinity works both with paired-end reads as well as single-end reads (including simultaneously both types at the same time). In the general case, the paired-end files are defined as `--left left.fq` and `--right right.fq` respectively. The single-end reads (a.k.a _orphans_) are defined by the flag `--single`. 
 
-First of all though, we need to make sure that there are no whitespaces in the header of the input fastq file. This is done using the following command:
-
-```
-cat ERR458493.qc.fq.gz.keep.abundfilt | tr -d ' ' > ERR458493.qc.fq.gz.keep.abundfilt.clean
-```
 
 So let's run the assembler as follows:
 
 ```
-time Trinity --seqType fq --max_memory 10G --CPU 4 --single ERR458493.qc.fq.gz.keep.abundfilt.clean --output yeast_trinity
+time Trinity --seqType fq --max_memory 15G --CPU 4 --left left.fq.gz --right right.fq.gz --output nema_trinity
 ```
 
-(This will take about 20 minutes)
+(This will take about 10 minutes)
 
 You should see something like:
 
 ```
 ** Harvesting all assembled transcripts into a single multi-fasta file...
 
-Saturday, June 30, 2018: 16:42:08       CMD: find /home/tx160085/assembly/yeast_trinity/read_partitions/ -name '*inity.fasta'  | /opt/miniconda/opt/trinity-2.6.6/util/support_scripts /partitioned_trinity_aggregator.pl TRINITY_DN > /home/tx160085/assembly/yeast_trinity/Trinity.fasta.tmp 
--relocating /home/tx160085/assembly/yeast_trinity/Trinity.fasta.tmp to /home/tx160085/assembly/yeast_trinity/Trinity.fasta
-Saturday, June 30, 2018: 16:42:08       CMD: mv /home/tx160085/assembly/yeast_trinity/Trinity.fasta.tmp /home/tx160085/assembly/yeast_trinity/Trinity.fasta
+Thursday, October 25, 2018: 21:55:15	CMD: find /home/dibbears/work/assembly/nema_trinity/read_partitions/ -name '*inity.fasta'  | /opt/miniconda3/opt/trinity-2.8.4/util/support_scripts/partitioned_trinity_aggregator.pl --token_prefix TRINITY_DN --output_prefix /home/dibbears/work/assembly/nema_trinity/Trinity.tmp
+-relocating Trinity.tmp.fasta to /home/dibbears/work/assembly/nema_trinity/Trinity.fasta
+Thursday, October 25, 2018: 21:55:15	CMD: mv Trinity.tmp.fasta /home/dibbears/work/assembly/nema_trinity/Trinity.fasta
+
 
 ###################################################################
-Trinity assemblies are written to /home/tx160085/assembly/yeast_trinity/Trinity.fasta
+Trinity assemblies are written to /home/dibbears/work/assembly/nema_trinity/Trinity.fasta
 ###################################################################
 
-Saturday, June 30, 2018: 16:42:08       CMD: /opt/miniconda/opt/trinity-2.6.6/util/support_scripts/get_Trinity_gene_to_trans_map.pl /home/tx160085/assembly/yeast_trinity/Trinity.fasta > /home/tx160085/assembly/yeast_trinity/Trinity.fasta.gene_trans_map
+
+Thursday, October 25, 2018: 21:55:15	CMD: /opt/miniconda3/opt/trinity-2.8.4/util/support_scripts/get_Trinity_gene_to_trans_map.pl /home/dibbears/work/assembly/nema_trinity/Trinity.fasta > /home/dibbears/work/assembly/nema_trinity/Trinity.fasta.gene_trans_map
+
+real	7m7.692s
+user	23m59.929s
+sys	13m32.485s
 ```
 
 at the end.
 
 
 
-### Looking at the assembly
+## Looking at the assembly
 
 First, save the assembly:
 
 ```
-cp yeast_trinity/Trinity.fasta yeast-transcriptome-assembly.fa
+cp nema_trinity/Trinity.fasta nema-transcriptome-assembly.fa
 ``` 
  
 Now, look at the beginning:
 
 ```
-head yeast-transcriptome-assembly.fa
+head nema-transcriptome-assembly.fa
 ```
     
-It's RNA! Yay!
+These are the transcripts! Yay!
 
 Let's capture also some statistics of the Trinity assembly. Trinity provides a handy tool to do exactly that:
 
 ```
-TrinityStats.pl yeast-transcriptome-assembly.fa
+TrinityStats.pl nema-transcriptome-assembly.fa
 ```
 
 The output should look something like the following:
@@ -133,37 +101,44 @@ The output should look something like the following:
 ################################
 ## Counts of transcripts, etc.
 ################################
-Total trinity 'genes':  3305
-Total trinity transcripts:      3322
-Percent GC: 42.05
+Total trinity 'genes':	217
+Total trinity transcripts:	220
+Percent GC: 48.24
 
 ########################################
 Stats based on ALL transcript contigs:
 ########################################
 
-        Contig N10: 1355
-        Contig N20: 1016
-        Contig N30: 781
-        Contig N40: 617
-        Contig N50: 502
+	Contig N10: 1763
+	Contig N20: 819
+	Contig N30: 548
+	Contig N40: 407
+	Contig N50: 320
 
-        Median contig length: 319
-        Average contig: 441.65
-        Total assembled bases: 1467173
+	Median contig length: 245.5
+	Average contig: 351.60
+	Total assembled bases: 77353
+
 
 #####################################################
 ## Stats based on ONLY LONGEST ISOFORM per 'GENE':
 #####################################################
 
-        Contig N10: 1358
-        Contig N20: 1016
-        Contig N30: 781
-        Contig N40: 617
-        Contig N50: 500
+	Contig N10: 1034
+	Contig N20: 605
+	Contig N30: 454
+	Contig N40: 357
+	Contig N50: 303
 
-        Median contig length: 319
-        Average contig: 440.93
-        Total assembled bases: 1457279
+	Median contig length: 245
+	Average contig: 328.43
+	Total assembled bases: 71270
 ```
 
 This is a set of summary stats about your assembly. Are they good? Bad? How would you know?
+
+## Suggestions for next steps 
+
+After generating a *de novo* transcriptome assembly:
+* [annotation](https://angus.readthedocs.io/en/2018/dammit_annotation.html)
+* [evaluation](https://dibsi-rnaseq.readthedocs.io/en/latest/evaluation.html)

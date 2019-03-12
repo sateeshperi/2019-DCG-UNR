@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>8. GitHub: How not to lose your entire analysis! &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. De novo transcriptome assembly" href="transcriptome-assembly.html" />
+    <link rel="prev" title="7. Short read quality and trimming" href="quality-trimming.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="transcriptome-assembly.html" title="9. De novo transcriptome assembly"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="quality-trimming.html" title="7. Short read quality and trimming"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">8. GitHub: How not to lose your entire analysis!</a><ul>
+<li><a class="reference internal" href="#why-version-control">8.1. Why Version Control?</a></li>
+<li><a class="reference internal" href="#what-is-git-and-why-use-it">8.2. What is Git and why use it?</a></li>
+<li><a class="reference internal" href="#options-in-git">8.3. Options in Git</a><ul>
+<li><a class="reference internal" href="#configuring-global-options">8.3.1. Configuring global options</a></li>
+<li><a class="reference internal" href="#initiating-a-repository">8.3.2. Initiating a repository</a></li>
+<li><a class="reference internal" href="#handling-a-repository">8.3.3. Handling a repository</a></li>
+<li><a class="reference internal" href="#staging">8.3.4. Staging</a></li>
+<li><a class="reference internal" href="#backing-up-your-repositories-with-github">8.3.5. Backing up your repositories with GitHub</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#git-github-overview">8.4. Git-GitHub Overview</a></li>
+<li><a class="reference internal" href="#exploring-github">8.5. Exploring Github</a></li>
+<li><a class="reference internal" href="#collaborating-via-github">8.6. Collaborating via GitHub</a></li>
+<li><a class="reference internal" href="#look-at-others-repositories">8.7. Look at others’ repositories:</a></li>
+<li><a class="reference internal" href="#host-websites-blogs-on-github">8.8. Host Websites &amp; Blogs on GitHub</a></li>
+<li><a class="reference internal" href="#suggestions-for-good-git-usage">8.9. Suggestions for good Git Usage:</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quality-trimming.html"
+                        title="previous chapter">7. Short read quality and trimming</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="transcriptome-assembly.html"
+                        title="next chapter">9. De novo transcriptome assembly</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/git_lesson.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="toc.html">Docs</a></li>
+              
+              <li>8. GitHub: How not to lose your entire analysis!</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="github-how-not-to-lose-your-entire-analysis">
+<h1>8. GitHub: How not to lose your entire analysis!<a class="headerlink" href="#github-how-not-to-lose-your-entire-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-version-control">
+<h2>8.1. Why Version Control?<a class="headerlink" href="#why-version-control" title="Permalink to this headline">¶</a></h2>
+<p>Version control is essential in creating any project that  takes longer than 5 minutes to complete. Even if your memory is longer than 5 minutes, next month you are not likely to be able to retrace your steps.</p>
+<p><img alt="_images/vc_logo.png" src="_images/vc_logo.png" />vc_logo</p>
+<p>Version control will allow you to back up every point at which your analysis is standing, provided you actively identify those points yourself. Imagine that every time you press the save key on a word document, every change between the last time you saved and now was saved in a different version of the document. This way, you’re only viewing the final version of your text, but if you wanted to, you could go back and view all of the old versions.</p>
+<p><img alt="https://i.imgur.com/Foktz0Z.gif" src="https://i.imgur.com/Foktz0Z.gif" /></p>
+<p><strong>When you are doing this yourself, this can get cumbersome, so let git do it for you!</strong></p>
+</div>
+<div class="section" id="what-is-git-and-why-use-it">
+<h2>8.2. What is Git and why use it?<a class="headerlink" href="#what-is-git-and-why-use-it" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/git_logo.png" src="_images/git_logo.png" />git_logo</p>
+<p>Git is an open source distributed version control system that facilitates GitHub activities on your laptop or desktop. Version control using Git is the most reasonable way to keep track of changes in code, manuscripts, presentations, and data analysis projects</p>
+</div>
+<div class="section" id="options-in-git">
+<h2>8.3. Options in Git<a class="headerlink" href="#options-in-git" title="Permalink to this headline">¶</a></h2>
+<p>The name of the software you’re running is <strong>git</strong>, and you can use commands in a similar fashion as what you’ve learning in <strong>bash</strong>. The syntax of git commands is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">verb</span> <span class="n">options</span>
+</pre></div>
+</div>
+<p>In git, there are different git commands (verbs) and different options for those commands.</p>
+<div class="section" id="configuring-global-options">
+<h3>8.3.1. Configuring global options<a class="headerlink" href="#configuring-global-options" title="Permalink to this headline">¶</a></h3>
+<p>When you start using git, you build repositories, which hold all the scripts and notes for each of your projects. It is recommended that you use one repository for each project.</p>
+<p>In order for git to recognize you as the owner of those repositories, you need to first set up the global options for git on your virtual (or personal) machine.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Elias Oziolor&quot;
+$ git config --global user.email &quot;emoziolor@ucdavis.edu&quot;
+</pre></div>
+</div>
+<p>I told git who I am and where to find me. Make sure that this is the same e-mail address that you have or will open a <a class="reference external" href="www.github.com"><strong>GitHub</strong></a> account with.</p>
+</div>
+<div class="section" id="initiating-a-repository">
+<h3>8.3.2. Initiating a repository<a class="headerlink" href="#initiating-a-repository" title="Permalink to this headline">¶</a></h3>
+<p>Once you’ve chosen a location for all of your work on this project, in our case the <strong>~/project</strong> directory, you can create a repository for this project.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span>
+<span class="n">mkdir</span> <span class="n">project</span>
+<span class="n">cd</span> <span class="n">project</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>What is a repository</strong>: A Git repository is virtual storage for your project. It allows you to save versions of your code, which you can access when needed. Use a single repository for each project.</p>
+<p><strong>Sample setup</strong>: I like to include two folders in my repositories: 1) data; 2) scripts.</p>
+<p>To start a repository you’ll use the <strong>git init</strong> command. git init is a one-time command you use during the initial setup of a new repo. Executing this command will create a new .git subdirectory in your current working directory. This will also create a new master branch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+</pre></div>
+</div>
+<p>If you type the command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code>, you will be able to see that there is a .git file in the folder, which is not your git repository.</p>
+</div>
+<div class="section" id="handling-a-repository">
+<h3>8.3.3. Handling a repository<a class="headerlink" href="#handling-a-repository" title="Permalink to this headline">¶</a></h3>
+<p><img alt="_images/git_local.png" src="_images/git_local.png" />git_local</p>
+<p>Once you have a repository, let’s start using it to back things up. There are several terms that you need to be familiar with to be comfortable with git:</p>
+<p><strong>Staging files</strong>: When you <strong>stage</strong> files for commit, this means that you are telling git to save the changes in these particular files in the commit that you are about to do.</p>
+<p><strong>Commit</strong>: When you perform a commit, you log any changes to staged files and lock those changes to this particular time.</p>
+<p><strong>Commit message</strong>: When you perform a commit, you are allowed to enter a message, which will later be used to remind you what you did in this particular chunk of work that you commited. <strong>IMPORTANT</strong>: Make sure those messages are informative! 3 months from now, you might want to get back to something that is no longer working and figure out where the issue originated, if you make generic commits messages like “Worked on file.txt”, you’ll be in deep trouble.</p>
+</div>
+<div class="section" id="staging">
+<h3>8.3.4. Staging<a class="headerlink" href="#staging" title="Permalink to this headline">¶</a></h3>
+<p>Now that you’ve started a repository (or a repo), let’s create some folders:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">data</span>
+<span class="n">mkdir</span> <span class="n">scripts</span>
+</pre></div>
+</div>
+<p>Now, in most cases, the data you have in your data folder will be way too large to commit in git. Git is created to commit code and small amounts of text. What we need to do is <strong>ignore</strong> everything that is too large.</p>
+<p>We do this by creating a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file, which contains all of the directories or types of files that we would like to ignore. It starts with a <strong>.</strong> because it is a “hidden” file. Meaning if we type <code class="docutils literal notranslate"><span class="pre">ls</span></code>, we won’t be able to see it. We would need to specify <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="n">nano</span> <span class="o">.</span><span class="n">gitignore</span>
+
+<span class="o">/</span><span class="n">data</span>
+<span class="o">*.</span><span class="n">fasta</span>
+</pre></div>
+</div>
+<p>Now we’ve created a file, which will force git to ignore everything that is in the folder <code class="docutils literal notranslate"><span class="pre">/data</span></code> and any file that is of the filetype <code class="docutils literal notranslate"><span class="pre">fasta</span></code>. You can do this with any folder or filetype you would like!</p>
+<p>Let’s start with our first <strong>commit</strong>. We want to first stage the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>Now the message that git shows you should be that your .gitignore file is in green (staged for commit), while eall other files/folders are in red (not staged).</p>
+<p>We can start by committing this set of changes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial commit: .gitignore file for /data and fasta&quot;</span>
+</pre></div>
+</div>
+<p>There we go! First commit is done. To track what happened you can type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>in the repository folder and that will show you a set of commits that you’ve done so far.</p>
+<p>While you now have your first commit, you can start committing everything else in your repo without worries that it is too large (because now git will ignore the large things).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>This command will stage every change you’ve made since your last commit.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Commit of initial repository setup&quot;</span>
+<span class="n">git</span> <span class="n">log</span>
+</pre></div>
+</div>
+<p>If you are wondering if all the files are truly staged for commit before you commit them, you can check again with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code></p>
+</div>
+<div class="section" id="backing-up-your-repositories-with-github">
+<h3>8.3.5. Backing up your repositories with GitHub<a class="headerlink" href="#backing-up-your-repositories-with-github" title="Permalink to this headline">¶</a></h3>
+<p>Great! Now you have a repo with 2 commits. This is locally backed up now, but what if you lose your computer? This is another strong asset of git - it can back up files remotely.</p>
+<p><strong>GitHub</strong> is online virtual space to store Git repositories and provides an interface for exploring git repositories.</p>
+<p>Let’s go to <a class="reference external" href="www.github.com">GitHub</a> and create a profile. If you have one already, take a second to admire your work.</p>
+<p>Once you have set up a profile, it’s time to create a repository in github, which will then receive all the backups from the repository you created on your local machine.</p>
+<p>Go to your profile and add click the <strong>plus</strong> button.</p>
+<img src="https://i.imgur.com/wGFfeSd.png" width="900" height="600"><p>Then fill out the necessary information for your repository to be distinct and recognizeable.</p>
+<img src="https://i.imgur.com/MJszSW8.png" width="900" height="600"><p>When you’ve created the repository, GitHub will tell you what you need to do in order to sync your two repositories into one.</p>
+<p>Only use the last two lines, because you’ve already committed changes!</p>
+<img src="https://i.imgur.com/HZNr7XL.png" width="900" height="600"><p>Once you execute those two lines in your terminal, you should be able to see a reflection of your local repository online.</p>
+<p>Every time you type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p><strong>You will be prompted for your Github username and password at this point</strong></p>
+<blockquote>
+<div>To avoid having to type your username and password each time you push/pull from your github repos, read about Secure Login here: https://help.github.com/articles/connecting-to-github-with-ssh/</div></blockquote>
+<p>You will force git to back up all of your commits since the last time you <strong>pushed</strong> to be backed up online. FOR FREE!</p>
+</div>
+</div>
+<div class="section" id="git-github-overview">
+<h2>8.4. Git-GitHub Overview<a class="headerlink" href="#git-github-overview" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/git_overview.png" src="_images/git_overview.png" />git_overview</p>
+</div>
+<div class="section" id="exploring-github">
+<h2>8.5. Exploring Github<a class="headerlink" href="#exploring-github" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/git_ex_history.png" src="_images/git_ex_history.png" />git_ex_history
+<img alt="_images/git_ex_commit.png" src="_images/git_ex_commit.png" />git_ex_commit</p>
+</div>
+<div class="section" id="collaborating-via-github">
+<h2>8.6. Collaborating via GitHub<a class="headerlink" href="#collaborating-via-github" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>GitHub Issues</strong>
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. They’re kind of like email—except they can be shared and discussed with all.</li>
+</ul>
+<p>Read more about Mastering Issues on Github <a class="reference external" href="https://guides.github.com/features/issues/">here</a></p>
+<ul class="simple">
+<li><strong>GitHub Pull-Requests</strong></li>
+</ul>
+<p><img alt="_images/git_pr.png" src="_images/git_pr.png" />git_pr</p>
+<p>Pull requests let you tell others about changes you’ve pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.</p>
+</div>
+<div class="section" id="look-at-others-repositories">
+<h2>8.7. Look at others’ repositories:<a class="headerlink" href="#look-at-others-repositories" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/hadley">Hadley Wickham (ggplot2)</a></li>
+<li><a class="reference external" href="https://github.com/yihui">Yihui Xie (knitr)</a></li>
+</ul>
+</div>
+<div class="section" id="host-websites-blogs-on-github">
+<h2>8.8. Host Websites &amp; Blogs on GitHub<a class="headerlink" href="#host-websites-blogs-on-github" title="Permalink to this headline">¶</a></h2>
+<p>GitHub Pages is an awesome feature that lets you host websites/blogs for you and your projects.</p>
+<p><strong>Hosted directly from your GitHub repository. Just edit, push, and your changes are live.</strong></p>
+<p>Read more about GitHub Pages <a class="reference external" href="https://pages.github.com/">here</a></p>
+</div>
+<div class="section" id="suggestions-for-good-git-usage">
+<h2>8.9. Suggestions for good Git Usage:<a class="headerlink" href="#suggestions-for-good-git-usage" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li>commit in recognizeable chunks of work</li>
+<li>commit more often than you think you should!</li>
+<li>place informative messages with every commit</li>
+<li>code a bunch!</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="quality-trimming.html" title="previous chapter (use the left arrow)">7. Short read quality and trimming</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="transcriptome-assembly.html" title="next chapter (use the right arrow)">9. De novo transcriptome assembly</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="transcriptome-assembly.html" title="9. De novo transcriptome assembly"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="quality-trimming.html" title="7. Short read quality and trimming"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
