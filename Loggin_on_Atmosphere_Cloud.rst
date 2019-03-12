@@ -1,6 +1,8 @@
 **Logging onto Atmosphere Cloud**
 =================================
 
+create cyverse account first
+
 For the duration of this workshop, we will be accessing data and tools
 required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
 
