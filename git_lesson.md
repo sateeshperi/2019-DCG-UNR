@@ -199,9 +199,9 @@ Read more about Mastering Issues on Github [here](https://guides.github.com/feat
 Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 
 ## Look at others' repositories:
-  + [Hadley Wickham (ggplot2)](https://github.com/hadley)
+  + Hadley Wickham (ggplot2): https://github.com/hadley
 
-  + [Yihui Xie (knitr)](https://github.com/yihui)
+  + Yihui Xie (knitr): https://github.com/yihui
 
 ## Host Websites & Blogs on GitHub
 
