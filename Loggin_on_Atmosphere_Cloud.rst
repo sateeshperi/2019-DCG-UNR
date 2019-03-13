@@ -7,7 +7,7 @@ Atmosphere, CyVerse's cloud-computing platform allows you to launch your own iso
 
 **Before you can begin using Atmosphere, you must have a CyVerse account and be granted access to Atmosphere**
 
-**Request access to Atmosphere [here](https://user.cyverse.org/services/available)**
+**Request access to Atmosphere `here <https://user.cyverse.org/services/available>`**
 
 |cyverse_atmosphere|
 
@@ -16,9 +16,9 @@ the same operating system/computing environment.
 
 Below, we've provided screenshots of the whole process. You can click on them to zoom in. The important areas to fill in are highlighted.
 
-**Note** Cyverse has good documentation on how to use Atmosphere resources which you can find [here](https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html)
+**Note** Cyverse has good documentation on how to use Atmosphere resources which you can find `here <https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html>`
 
-First, go to the [Atmosphere](https://atmo.cyverse.org/application/images) and then click `login` (right-upper corner)
+First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>` and then click "login" (right-upper corner)
 
 |atmo-1|
 
@@ -196,7 +196,7 @@ For Windows, we first need to actually *install* a terminal.
 
 18. Install mobaxterm
 
-First, download [mobaxterm home edition (portable)](http://mobaxterm.mobatek.net/download-home-edition.html)
+First, download [mobaxterm home edition `portable <http://mobaxterm.mobatek.net/download-home-edition.html>`
 and run it.
 
 19. Start a new session
