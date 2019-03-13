@@ -1,10 +1,13 @@
 **Logging onto Atmosphere Cloud**
 =================================
 
-create cyverse account first
+For the duration of this workshop, we will be accessing data and tools required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
 
-For the duration of this workshop, we will be accessing data and tools
-required to analyze our data on a remote computer using the **CyVerse's Atmosphere cloud**.
+Atmosphere, CyVerse's cloud-computing platform allows you to launch your own isolated virtual machine (VM) image and software, using compute resources such as CyVerse-provided software suites, and preconfigured, frequently used analysis routines, relevant algorithms, and datasets. 
+
+**Before you can begin using Atmosphere, you must have a CyVerse account and be granted access to Atmosphere**
+
+**Request access to Atmosphere [here](https://user.cyverse.org/services/available)**
 
 |cyverse_atmosphere|
 
@@ -13,9 +16,9 @@ the same operating system/computing environment.
 
 Below, we've provided screenshots of the whole process. You can click on them to zoom in. The important areas to fill in are highlighted.
 
-**Note** Cyverse has good documentation on how to use Atmosphere resources which you can find 'here <https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html>'
+**Note** Cyverse has good documentation on how to use Atmosphere resources which you can find [here](https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html)
 
-First, go to the `Atmosphere <https://atmo.cyverse.org/application/images>`_ application and then click `login`
+First, go to the [Atmosphere](https://atmo.cyverse.org/application/images) and then click `login` (right-upper corner)
 
 |atmo-1|
 
