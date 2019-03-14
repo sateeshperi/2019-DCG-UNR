@@ -11,7 +11,7 @@ Table of contents
 
    intro.md
    
-   Loggin_on_Atmosphere_Cloud.rst
+   Loggin_on_Atmosphere_Cloud.md
 
    bash_lesson.md
    

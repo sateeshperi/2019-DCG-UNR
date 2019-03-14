@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=2018-setacna-rnaseq
+set SPHINXPROJ=2019-UNR-omics
 
 if "%1" == "" goto help
 

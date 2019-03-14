@@ -24,7 +24,7 @@ import guzzle_sphinx_theme
 # -- Project information -----------------------------------------------------
 
 project = '2019-UNR-omics'
-copyright = '2019, Sateesh Peri'
+copyright = '2019, Elias Oziolor, Sateesh Peri'
 author = 'Sateesh Peri'
 
 # The short X.Y version
@@ -107,7 +107,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = '2019-UNR-omics-doc'
+htmlhelp_basename = '2019-UNR-omics'
 
 
 # -- Options for LaTeX output ------------------------------------------------

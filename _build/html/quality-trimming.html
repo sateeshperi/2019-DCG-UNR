@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>7. Short read quality and trimming &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <title>12. Short read quality and trimming &#8212; 2019-UNR-omics 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. GitHub: How not to lose your entire analysis!" href="git_lesson.html" />
-    <link rel="prev" title="6. Working with Bioconda." href="bioconda-config.html" />
+    <link rel="next" title="13. GitHub: How not to lose your entire analysis!" href="git_lesson.html" />
+    <link rel="prev" title="11. Working with Bioconda." href="bioconda-config.html" />
   
    
 
@@ -39,10 +39,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="git_lesson.html" title="8. GitHub: How not to lose your entire analysis!"
+          <a href="git_lesson.html" title="13. GitHub: How not to lose your entire analysis!"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bioconda-config.html" title="6. Working with Bioconda."
+          <a href="bioconda-config.html" title="11. Working with Bioconda."
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -59,17 +59,17 @@
     <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
-<li><a class="reference internal" href="#">7. Short read quality and trimming</a><ul>
-<li><a class="reference internal" href="#data-source">7.1. Data source</a></li>
-<li><a class="reference internal" href="#check-that-your-data-is-where-it-should-be">7.2. Check that your data is where it should be</a></li>
-<li><a class="reference internal" href="#quality-trimming-and-light-quality-filtering">7.3. Quality trimming and light quality filtering</a><ul>
-<li><a class="reference internal" href="#link-your-data-into-your-working-directory">7.3.1. Link your data into your working directory</a></li>
-<li><a class="reference internal" href="#fastqc">7.3.2. FastQC</a></li>
-<li><a class="reference internal" href="#multiqc">7.3.3. MultiQC</a><ul>
-<li><a class="reference internal" href="#view-your-files-on-your-own-computer">7.3.3.1. View your files on your own computer</a></li>
+<li><a class="reference internal" href="#">12. Short read quality and trimming</a><ul>
+<li><a class="reference internal" href="#data-source">12.1. Data source</a></li>
+<li><a class="reference internal" href="#check-that-your-data-is-where-it-should-be">12.2. Check that your data is where it should be</a></li>
+<li><a class="reference internal" href="#quality-trimming-and-light-quality-filtering">12.3. Quality trimming and light quality filtering</a><ul>
+<li><a class="reference internal" href="#link-your-data-into-your-working-directory">12.3.1. Link your data into your working directory</a></li>
+<li><a class="reference internal" href="#fastqc">12.3.2. FastQC</a></li>
+<li><a class="reference internal" href="#multiqc">12.3.3. MultiQC</a><ul>
+<li><a class="reference internal" href="#view-your-files-on-your-own-computer">12.3.3.1. View your files on your own computer</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#adapter-trim-each-pair-of-files">7.3.4. Adapter trim each pair of files</a></li>
+<li><a class="reference internal" href="#adapter-trim-each-pair-of-files">12.3.4. Adapter trim each pair of files</a></li>
 </ul>
 </li>
 </ul>
@@ -81,10 +81,10 @@
 </div>
   <h4>Previous topic</h4>
   <p class="topless"><a href="bioconda-config.html"
-                        title="previous chapter">6. Working with Bioconda.</a></p>
+                        title="previous chapter">11. Working with Bioconda.</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="git_lesson.html"
-                        title="next chapter">8. GitHub: How not to lose your entire analysis!</a></p>
+                        title="next chapter">13. GitHub: How not to lose your entire analysis!</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -114,14 +114,14 @@
             <ol class="breadcrumb">
               <li><a href="toc.html">Docs</a></li>
               
-              <li>7. Short read quality and trimming</li>
+              <li>12. Short read quality and trimming</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="short-read-quality-and-trimming">
-<h1>7. Short read quality and trimming<a class="headerlink" href="#short-read-quality-and-trimming" title="Permalink to this headline">¶</a></h1>
+<h1>12. Short read quality and trimming<a class="headerlink" href="#short-read-quality-and-trimming" title="Permalink to this headline">¶</a></h1>
 <p>You should now be logged into your Atmosphere computer!  You should see
 something like this</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sateeshp@vm142-35:~$ 
@@ -136,7 +136,7 @@ something like this</p>
 </pre></div>
 </div>
 <div class="section" id="data-source">
-<h2>7.1. Data source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
+<h2>12.1. Data source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
 <p>We will be using mRNAseq reads from a small subset of data from <a class="reference external" href="https://en.wikipedia.org/wiki/Starlet_sea_anemone">Nematostella vectensis</a> <a class="reference external" href="https://evodevojournal.biomedcentral.com/articles/10.1186/2041-9139-4-16">(Tulin et al., 2013)</a>.</p>
 <p>Original RNAseq workflow protocol <a class="reference external" href="https://khmer-protocols.readthedocs.io/en/ctb/mrnaseq/">here</a>, more updated protocol <a class="reference external" href="http://eel-pond.readthedocs.io/en/latest/">here</a>.</p>
 <p>Load your data into <code class="docutils literal notranslate"><span class="pre">work/data</span></code>.</p>
@@ -161,7 +161,7 @@ directory; in this case, it will be <code class="docutils literal notranslate"><
 <p>Now load your data in!</p>
 </div>
 <div class="section" id="check-that-your-data-is-where-it-should-be">
-<h2>7.2. Check that your data is where it should be<a class="headerlink" href="#check-that-your-data-is-where-it-should-be" title="Permalink to this headline">¶</a></h2>
+<h2>12.2. Check that your data is where it should be<a class="headerlink" href="#check-that-your-data-is-where-it-should-be" title="Permalink to this headline">¶</a></h2>
 <p>Check:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ls $PROJECT/data
 </pre></div>
@@ -183,7 +183,7 @@ directory; in this case, it will be <code class="docutils literal notranslate"><
 </ul>
 </div>
 <div class="section" id="quality-trimming-and-light-quality-filtering">
-<h2>7.3. Quality trimming and light quality filtering<a class="headerlink" href="#quality-trimming-and-light-quality-filtering" title="Permalink to this headline">¶</a></h2>
+<h2>12.3. Quality trimming and light quality filtering<a class="headerlink" href="#quality-trimming-and-light-quality-filtering" title="Permalink to this headline">¶</a></h2>
 <p>Make sure you’ve got the PROJECT location defined, and your data is there:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="o">-</span><span class="n">u</span>
 <span class="n">printf</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">My raw data is in $PROJECT/data/, and consists of $(ls -1 $</span><span class="si">{PROJECT}</span><span class="s2">/data/*.fastq | wc -l) files</span><span class="se">\n\n</span><span class="s2">&quot;</span>
@@ -192,7 +192,7 @@ directory; in this case, it will be <code class="docutils literal notranslate"><
 </div>
 <p><em>Important:</em> If you get an error above or the count of files is wrong…STOP!! Revisit the installation instructions!</p>
 <div class="section" id="link-your-data-into-your-working-directory">
-<h3>7.3.1. Link your data into your working directory<a class="headerlink" href="#link-your-data-into-your-working-directory" title="Permalink to this headline">¶</a></h3>
+<h3>12.3.1. Link your data into your working directory<a class="headerlink" href="#link-your-data-into-your-working-directory" title="Permalink to this headline">¶</a></h3>
 <p>Change into your project directory and make a workspace for quality trimming:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ${PROJECT}
 mkdir -p quality
@@ -213,7 +213,7 @@ cd quality
 <code class="docutils literal notranslate"><span class="pre">.fastq</span></code>.</p>
 </div>
 <div class="section" id="fastqc">
-<h3>7.3.2. FastQC<a class="headerlink" href="#fastqc" title="Permalink to this headline">¶</a></h3>
+<h3>12.3.2. FastQC<a class="headerlink" href="#fastqc" title="Permalink to this headline">¶</a></h3>
 <p>We’re going to use
 <a class="reference external" href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>
 summarize the data. We already installed ‘fastqc’ on our computer for
@@ -243,7 +243,7 @@ you.</p>
 of the data (e.g. duplicate sequences are only analyzed for the first 100,000 sequences in each file.</p>
 </div>
 <div class="section" id="multiqc">
-<h3>7.3.3. MultiQC<a class="headerlink" href="#multiqc" title="Permalink to this headline">¶</a></h3>
+<h3>12.3.3. MultiQC<a class="headerlink" href="#multiqc" title="Permalink to this headline">¶</a></h3>
 <p>If you would like to aggregate all of your fastqc reports across many samples, <a class="reference external" href="http://multiqc.info/">MultiQC</a> will do this into a single report for easy comparison.</p>
 <p>Run MultiQC:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">multiqc</span> <span class="o">.</span>
@@ -262,7 +262,7 @@ of the data (e.g. duplicate sequences are only analyzed for the first 100,000 se
 </div>
 <p>You can also view this output <a class="reference external" href="_static/multiqc_report.html">here</a></p>
 <div class="section" id="view-your-files-on-your-own-computer">
-<h4>7.3.3.1. View your files on your own computer<a class="headerlink" href="#view-your-files-on-your-own-computer" title="Permalink to this headline">¶</a></h4>
+<h4>12.3.3.1. View your files on your own computer<a class="headerlink" href="#view-your-files-on-your-own-computer" title="Permalink to this headline">¶</a></h4>
 <p>As an alternative to viewing the files on the Rstudio server, we can secure copy (scp) these files to our own laptops, and view them from there.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">nema_fastqc</span>  <span class="c1"># make a directory for these files</span>
 <span class="n">scp</span> <span class="n">username</span><span class="nd">@ip</span><span class="o">.</span><span class="n">address</span><span class="p">:</span><span class="o">~/</span><span class="n">work</span><span class="o">/</span><span class="n">quality</span><span class="o">/*.</span><span class="n">html</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">nema_fastqc</span>
@@ -273,7 +273,7 @@ of the data (e.g. duplicate sequences are only analyzed for the first 100,000 se
 </div>
 </div>
 <div class="section" id="adapter-trim-each-pair-of-files">
-<h3>7.3.4. Adapter trim each pair of files<a class="headerlink" href="#adapter-trim-each-pair-of-files" title="Permalink to this headline">¶</a></h3>
+<h3>12.3.4. Adapter trim each pair of files<a class="headerlink" href="#adapter-trim-each-pair-of-files" title="Permalink to this headline">¶</a></h3>
 <p>Setup trim directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
 <span class="n">mkdir</span> <span class="n">trim</span>
@@ -353,11 +353,11 @@ assembly.</p>
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="bioconda-config.html" title="previous chapter (use the left arrow)">6. Working with Bioconda.</a>
+        <a class="btn btn-default" href="bioconda-config.html" title="previous chapter (use the left arrow)">11. Working with Bioconda.</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="git_lesson.html" title="next chapter (use the right arrow)">8. GitHub: How not to lose your entire analysis!</a>
+        <a class="btn btn-default" href="git_lesson.html" title="next chapter (use the right arrow)">13. GitHub: How not to lose your entire analysis!</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -372,10 +372,10 @@ assembly.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="git_lesson.html" title="8. GitHub: How not to lose your entire analysis!"
+          <a href="git_lesson.html" title="13. GitHub: How not to lose your entire analysis!"
              >next</a> |</li>
         <li class="right" >
-          <a href="bioconda-config.html" title="6. Working with Bioconda."
+          <a href="bioconda-config.html" title="11. Working with Bioconda."
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -387,7 +387,7 @@ assembly.</p>
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2019, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2019, Elias Oziolor, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>

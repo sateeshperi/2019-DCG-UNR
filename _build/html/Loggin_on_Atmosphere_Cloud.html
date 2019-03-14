@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Using the command line" href="bash_lesson.html" />
+    <link rel="next" title="10. Using the command line" href="bash_lesson.html" />
     <link rel="prev" title="3. Introductions" href="intro.html" />
   
    
@@ -39,7 +39,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="bash_lesson.html" title="5. Using the command line"
+          <a href="bash_lesson.html" title="10. Using the command line"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="intro.html" title="3. Introductions"
@@ -54,16 +54,47 @@
       </div>
   <div id="left-column">
     <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">4. Logging onto Atmosphere Cloud</a></li>
+<li><a class="reference internal" href="#setup">5. Setup</a><ul>
+<li><a class="reference internal" href="#windows-unix-terminal-setup">5.1. Windows UNIX Terminal Setup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#login-launch-instance">6. Login &amp; Launch Instance</a></li>
+<li><a class="reference internal" href="#ssh-secure-login">7. SSH Secure-Login</a></li>
+<li><a class="reference internal" href="#instance-maintenance">8. Instance Maintenance</a><ul>
+<li><a class="reference internal" href="#atmosphere-dashboard">8.1. Atmosphere Dashboard</a></li>
+<li><a class="reference internal" href="#delete-instance">8.2. Delete Instance</a></li>
+<li><a class="reference internal" href="#suspend-instance">8.3. Suspend Instance</a></li>
+<li><a class="reference internal" href="#request-more-aus">8.4. Request More AUs</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-features">9. Additional Features</a><ul>
+<li><a class="reference internal" href="#web-shell">9.1. Web Shell</a></li>
+<li><a class="reference internal" href="#web-desktop">9.2. Web Desktop</a></li>
+<li><a class="reference internal" href="#custom-images">9.3. Custom Images</a></li>
+<li><a class="reference internal" href="#deposit-rsa-key">9.4. Deposit rsa-key</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
   <h4>Previous topic</h4>
   <p class="topless"><a href="intro.html"
                         title="previous chapter">3. Introductions</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="bash_lesson.html"
-                        title="next chapter">5. Using the command line</a></p>
+                        title="next chapter">10. Using the command line</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/Loggin_on_Atmosphere_Cloud.rst.txt"
+      <li><a href="_sources/Loggin_on_Atmosphere_Cloud.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -89,210 +120,201 @@
             <ol class="breadcrumb">
               <li><a href="toc.html">Docs</a></li>
               
-              <li>4. <strong>Logging onto Atmosphere Cloud</strong></li>
+              <li>4. Logging onto Atmosphere Cloud</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="logging-onto-atmosphere-cloud">
-<h1>4. <strong>Logging onto Atmosphere Cloud</strong><a class="headerlink" href="#logging-onto-atmosphere-cloud" title="Permalink to this headline">¶</a></h1>
-<p>For the duration of this workshop, we will be accessing data and tools required to analyze our data on a remote computer using the <strong>CyVerse’s Atmosphere cloud</strong>.</p>
-<p>Atmosphere, CyVerse’s cloud-computing platform allows you to launch your own isolated virtual machine (VM) image and software, using compute resources such as CyVerse-provided software suites, and preconfigured, frequently used analysis routines, relevant algorithms, and datasets.</p>
-<p><strong>Before you can begin using Atmosphere, you must have a CyVerse account and be granted access to Atmosphere</strong></p>
-<p><strong>Request access to Atmosphere [here](https://user.cyverse.org/services/available)</strong></p>
-<p><img alt="cyverse_atmosphere" src="_images/cyverse_atmo.png" /></p>
-<p>This is the first and last place in these lessons where it will matter if you are using PC, Mac, or Linux. After we connect, we will all be on
-the same operating system/computing environment.</p>
-<p>Below, we’ve provided screenshots of the whole process. You can click on them to zoom in. The important areas to fill in are highlighted.</p>
-<p><strong>Note</strong> Cyverse has good documentation on how to use Atmosphere resources which you can find [here](<a class="reference external" href="https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html">https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html</a>)</p>
-<p>First, go to the [Atmosphere](<a class="reference external" href="https://atmo.cyverse.org/application/images">https://atmo.cyverse.org/application/images</a>) and then click <cite>login</cite> (right-upper corner)</p>
-<p><img alt="atmo-1" src="_images/atmo_1.png" /></p>
-<div class="admonition important">
-<p class="first admonition-title">Important</p>
-<p class="last">As descrbied in the <a class="reference external" href="https://sateeshperi.github.io/2019-01-15-reno/">pre-workshop setup</a>, you need to have access to the CyVerse Atmosphere Cloud. If you are not able to log-in for some reason, please let us know and we will fix it immediately.</p>
+<h1>4. Logging onto Atmosphere Cloud<a class="headerlink" href="#logging-onto-atmosphere-cloud" title="Permalink to this headline">¶</a></h1>
 </div>
-<ol class="arabic simple">
-<li>Fill in the username and password and click “LOGIN”</li>
-</ol>
+<div class="section" id="setup">
+<h1>5. Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Fill in the username, which is your CyVerse username, and then enter the password (which is your CyVerse password).</li>
+<li>For the duration of this workshop, we will be accessing data and tools required to analyze our data on a remote computer using the <strong>CyVerse’s Atmosphere cloud</strong>.</li>
 </ul>
-<p><img alt="atmo-2" src="_images/atmo_2.png" /></p>
-<ol class="arabic simple" start="2">
+<p><img alt="_images/setup1.png" src="_images/setup1.png" /></p>
+<ul class="simple">
+<li>Atmosphere, CyVerse’s cloud-computing platform allows you to launch your own isolated virtual machine (VM) image and software, using compute resources such as CyVerse-provided software suites, and pre-configured, frequently used analysis routines, relevant algorithms, and datasets.</li>
+</ul>
+<blockquote>
+<div><strong>Before you can begin using Atmosphere, you must have a CyVerse account and be granted access to Atmosphere</strong></div></blockquote>
+<blockquote>
+<div><strong>Request access to Atmosphere <a class="reference external" href="https://user.cyverse.org/services/available">here</a></strong></div></blockquote>
+<ul class="simple">
+<li>This is the first and last place in these lessons where it will matter if you are using PC, Mac, or Linux. After we connect to our virtual machines built using the same image; we will all be on the same operating system/computing environment.</li>
+<li>Cyverse documentation on how to use Atmosphere resources can be found <a class="reference external" href="https://learning.cyverse.org/projects/atmosphere-guide/en/latest/index.html">here</a></li>
+</ul>
+<div class="section" id="windows-unix-terminal-setup">
+<h2>5.1. Windows UNIX Terminal Setup<a class="headerlink" href="#windows-unix-terminal-setup" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Windows-users will need to install UNIX-ready terminal.</li>
+<li>Download &amp; Install <a class="reference external" href="http://mobaxterm.mobatek.net/download-home-edition.html">mobaxterm home edition</a></li>
+</ul>
+<p><img alt="_images/setup2.png" src="_images/setup2.png" /></p>
+<ul class="simple">
+<li>Start a new session; Fill in your “remote host” the IP address of your virtual machine. Then select “specify username” and enter your cyverse username; Click OK.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="login-launch-instance">
+<h1>6. Login &amp; Launch Instance<a class="headerlink" href="#login-launch-instance" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Login to <a class="reference external" href="https://atmo.cyverse.org/application/images">Atmosphere</a> by clicking the “login” butoon (right-upper corner).</li>
+</ul>
+<p><img alt="_images/login1.png" src="_images/login1.png" /></p>
+<ul class="simple">
+<li>Fill in your CyVerse username and password and click “LOGIN”</li>
+</ul>
+<p><img alt="_images/login2.png" src="_images/login2.png" /></p>
+<ul class="simple">
 <li>Select the “Projects” tab and then click the “CREATE NEW PROJECT” button</li>
-</ol>
-<ul class="simple">
-<li>This is something you only need to do once.</li>
-<li>A project is a workspace that lets you keep things together.</li>
 </ul>
-<ol class="arabic simple" start="3">
-<li>Click on the “Projects” tab on the top and then click the “CREATE NEW PROJECT” button</li>
-</ol>
-<p><img alt="atmo-3" src="_images/atmo_3.png" /></p>
-<p><img alt="atmo-4" src="_images/atmo_4.png" /></p>
-<ol class="arabic simple" start="4">
-<li>Enter the name “DC-Genomics” into the Project Name and put something simple like “Genomics Carpentry” into the description. Then click “CREATE”.</li>
-</ol>
-<p><img alt="atmo-5" src="_images/atmo_5.png" /></p>
-<ol class="arabic simple" start="5">
-<li>Select the newly created project</li>
-</ol>
+<p><img alt="_images/login3.png" src="_images/login3.png" />
+<img alt="_images/login4.png" src="_images/login4.png" /></p>
+<ul class="simple">
+<li>Give your Project folder a name (Description is optional). Then click “CREATE”.</li>
+</ul>
+<p><img alt="_images/login5.png" src="_images/login5.png" /></p>
 <ul class="simple">
 <li>Click on your newly created project.</li>
 <li>Click “NEW” and then “Instance” from the dropdown menu to start up a new virtual machine.</li>
 </ul>
-<p><img alt="atmo-6" src="_images/atmo_6.png" /></p>
-<ol class="arabic simple" start="6">
-<li>Naviagate to “Show All” tab and Search for “DCG-UNR-RNAseq”; click the “DCG-UNR-RNAseq” image.</li>
-</ol>
-<p><img alt="atmo-img" src="_images/atmo_img.png" /></p>
-<ol class="arabic" start="7">
-<li><p class="first">Name your virtual machine something simple such as “workshop” or leave it as default which is the image name and select the following”</p>
-<blockquote>
-<div><ul class="simple">
+<p><img alt="_images/login6.png" src="_images/login6.png" /></p>
+<ul class="simple">
+<li>To select an image click on <strong>“Show All”</strong> tab and Search for <strong>“DCG-UNR-RNAseq”</strong> and choose the “DCG-UNR-RNAseq” image created by ‘sateeshp’.</li>
+</ul>
+<p><img alt="_images/login7.png" src="_images/login7.png" /></p>
+<ul class="simple">
+<li>Basic options<ul>
+<li>Instance Name: e.x., “workshop” or you can leave it default which is the image name.</li>
+<li>Base Image Version: “2.0”</li>
+<li>Project: select project folder to host the instance</li>
+<li>Allocation Source: should be your cyverse account</li>
 <li>Provider: “CyVerse Cloud - Marana”</li>
-<li>Instance size: “medium2 (CPU: 4, Mem: 16GB, Disk: 160GB)”</li>
-<li>Leave rest of the fields as default.</li>
+<li>Instance size: <strong>Depending on your allocations, choose most suitable one.</strong></li>
+<li>Recommended for this workshop: “medium2 (CPU: 4, Mem: 16GB, Disk: 160GB)”</li>
 </ul>
-</div></blockquote>
 </li>
-</ol>
-<p><img alt="atmo-7" src="_images/atmo_7.png" /></p>
-<ul class="simple">
-<li>Wait for it to become active</li>
-<li>It will now be booting up! This will take 2-5 minutes. Just wait! Don’t reload or do anything.One the virtual machine is ready, the “Status” column will turn green and described as “Active” (see below)</li>
 </ul>
-<p><img alt="atmo-8" src="_images/atmo_8.png" /></p>
-<ol class="arabic simple" start="8">
-<li><strong>Setting up Secure Login - SSH</strong></li>
-</ol>
-<p>8.1. <strong>Concerning Keys</strong></p>
-<blockquote>
-<div>Cryptographic keys are a convenient and secure way to authenticate without having to use passwords. They consist of a pair of files called the public and private keys: the public part can be shared with whoever you’d like to authenticate with (in our case, CyVerse Atmosphere!), and the private part is kept “secret” on your machine. Things that are encrypted with the public key can be be decrypted with the private key, but it is computationally intractable (ie, it would take on the order of thousands of years) to determine a private key from a public key. You can read more about it [here](<a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys–2</a>)</div></blockquote>
-<p>8.2. <strong>Create the RSA Key Pair</strong></p>
+<p><img alt="_images/login8.png" src="_images/login8.png" /></p>
 <ul class="simple">
-<li>The first step is to create the key pair on your laptop/computer:</li>
+<li>Launch instance and wait for the build to be deployed.</li>
+<li>The virtual machine should now be booting up! and should take ~ 5-10 minutes. <strong>Note: During the build process..Be patient! Don’t reload or do anything. Once the virtual machine is ready, the “Activity” column will show “N/A” and the “Status” column will turn green and “Active” (see below)</strong></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">$</span> <span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span>
-<span class="pre">`</span></code></p>
-<p>8.3. <strong>Store the Keys and Passphrase</strong></p>
+<p><img alt="_images/login9.png" src="_images/login9.png" /></p>
 <ul class="simple">
-<li>Once you have entered the Gen Key command, you will get a few more questions:</li>
+<li>Navigate back to ‘Projects’ and click on your new instance’s name to see more information related to the instance you just created!</li>
+<li>Copy the IP address of your instance.</li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">$</span> <span class="pre">Enter</span> <span class="pre">file</span> <span class="pre">in</span> <span class="pre">which</span> <span class="pre">to</span> <span class="pre">save</span> <span class="pre">the</span> <span class="pre">key</span> <span class="pre">(/home/demo/.ssh/id_rsa):</span>
-<span class="pre">`</span></code></p>
+<p><img alt="_images/login10.png" src="_images/login10.png" /></p>
+</div>
+<div class="section" id="ssh-secure-login">
+<h1>7. SSH Secure-Login<a class="headerlink" href="#ssh-secure-login" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>You can press enter here, saving the file to the user home (in this case, my example user is called demo).</li>
+<li>MACOS &amp; LINUX users can open a Terminal window and Windows users start a new session in mobaxterm (see # Setup)</li>
+<li>Establish a secure-login to the instance by typing the following:</li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">$</span> <span class="pre">Enter</span> <span class="pre">passphrase</span> <span class="pre">(empty</span> <span class="pre">for</span> <span class="pre">no</span> <span class="pre">passphrase):</span>
-<span class="pre">`</span></code></p>
-<ul class="simple">
-<li>It’s up to you whether you want to use a passphrase though we recommend NOT to!.</li>
-<li>The public key is now located in /home/demo/.ssh/id_rsa.pub. The private key (identification) is now located in /home/demo/.ssh/id_rsa</li>
-</ul>
-<p>8.4. <strong>Copy the Public Key</strong></p>
-<ul class="simple">
-<li>Once the key pair is generated, it’s time to place the public key on the server that we want to use.</li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">$</span> <span class="pre">cat</span> <span class="pre">~/.ssh/id_rsa.pub</span>
-<span class="pre">`</span></code></p>
-<ul class="simple">
-<li>Copy all of the text that constitutes your public key and we will place it our Atmosphere accounts.</li>
-</ul>
-<p>8.5. <strong>Deposit key on Atmosphere</strong></p>
-<p>You are now ready to deposit your generated public key onto your Atmosphere account, to gain secure login each time you build and use an instance on Atmosphere.</p>
-<ol class="arabic simple" start="9">
-<li>Click on your username on the Atmosphere page and navigate to ‘Settings’ page</li>
-</ol>
-<p><img alt="atmo-10" src="_images/atmo_10.png" /></p>
-<ol class="arabic simple" start="10">
-<li>Scroll down to the advanced section and click on ‘Show More’</li>
-</ol>
-<p><img alt="atmo-11" src="_images/atmo_11.png" /></p>
-<ol class="arabic simple" start="11">
-<li>In the ‘SSH Configuration’ section, click on the ‘+’ sign</li>
-</ol>
-<p><img alt="atmo-12" src="_images/atmo_12.png" /></p>
-<ol class="arabic simple" start="12">
-<li>Paste your public key generated earlier and give this key a name</li>
-</ol>
-<p><img alt="atmo-13" src="_images/atmo_13.png" /></p>
-<ul class="simple">
-<li>You can now securely login to all the instances you launch on Atmosphere without having to type a password each-time you login.</li>
-</ul>
-<ol class="arabic simple" start="13">
-<li>Navigate back to ‘Projects’ and click on your new instance’s name to get more information!</li>
-<li>Copy the IP address of your instance</li>
-</ol>
-<p><img alt="atmo-9" src="_images/atmo_9.png" /></p>
-<ol class="arabic simple" start="15">
-<li><strong>Log in from your computer’s terminal</strong></li>
-</ol>
-<ul class="simple">
-<li>Now that you have set up your public key with CyVerse, you can open you terminal (if you are using Windows OS, please follow our log in guidelines by MobaXterm to open a Unix Based terminal or if you have already installed Ubuntu terminal through Developer mode, feel free to use that).</li>
-<li>Open the Terminal window and type the following:</li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">`</span>
-<span class="pre">ssh</span> <span class="pre">your_CyVerseusername&#64;ip_address</span>
-<span class="pre">`</span></code>
-<img alt="atmo-14" src="_images/atmo_14.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">your_cyverseusername</span><span class="nd">@ip_address</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li>This should log you into CyVerse and you should see a screen like this:</li>
 </ul>
-<p><img alt="atmo-15" src="_images/atmo_15.png" /></p>
+<p><img alt="_images/ssh1.png" src="_images/ssh1.png" /></p>
 <ul class="simple">
-<li>Enter ‘Yes’ and the keys are matched and secure login with crytographic keys has been established and should see the following on your terminal.</li>
+<li>Enter ‘yes’ and then you will be asked for your CyVerse password.</li>
+<li>Successful login should look something like below</li>
 </ul>
-<p><img alt="atmo-16" src="_images/atmo_16.png" /></p>
-<ol class="arabic simple" start="16">
-<li><strong>Deleting your instance</strong></li>
-</ol>
+<p><img alt="_images/ssh2.png" src="_images/ssh2.png" /></p>
+<blockquote>
+<div>To close your current session and end SSH connection, type ‘exit’</div></blockquote>
+<p><img alt="_images/ssh3.png" src="_images/ssh3.png" /></p>
+</div>
+<div class="section" id="instance-maintenance">
+<h1>8. Instance Maintenance<a class="headerlink" href="#instance-maintenance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="atmosphere-dashboard">
+<h2>8.1. Atmosphere Dashboard<a class="headerlink" href="#atmosphere-dashboard" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/maintain1.png" src="_images/maintain1.png" /></p>
+</div>
+<div class="section" id="delete-instance">
+<h2>8.2. Delete Instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>To completely remove your instance, you can select the “Delete” button from the instance details page.</li>
-</ul>
-<p><img alt="atmo-17" src="_images/atmo_17.png" /></p>
-<ul class="simple">
 <li>This will open up a dialogue window. Select the “Yes, delete this instance” button.</li>
-</ul>
-<p><img alt="atmo-18" src="_images/atmo_18.png" /></p>
-<ul class="simple">
 <li>It may take Atmosphere a few minutes to process your request. The instance should disappear from the project when it has been successfully deleted.</li>
 </ul>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it.</p>
+<p><img alt="_images/maintain3.png" src="_images/maintain3.png" /></p>
 </div>
-<ol class="arabic simple" start="17">
-<li><strong>Additional CyVerse Features</strong></li>
-</ol>
-<p>Access your instance through a web desktop version from your CyVerse account
-<img alt="atmo-19" src="_images/atmo_19.png" /></p>
-<p>Access Command-Line Directly from your CyVerse account</p>
-<p><img alt="atmo-20" src="_images/atmo_20.png" /></p>
-<ol class="arabic simple" start="17">
-<li><strong>On Windows</strong></li>
-</ol>
-<p>For Windows, we first need to actually <em>install</em> a terminal.</p>
-<ol class="arabic simple" start="18">
-<li>Install mobaxterm</li>
-</ol>
-<p>First, download [mobaxterm home edition (portable)](<a class="reference external" href="http://mobaxterm.mobatek.net/download-home-edition.html">http://mobaxterm.mobatek.net/download-home-edition.html</a>)
-and run it.</p>
-<ol class="arabic simple" start="19">
-<li>Start a new session</li>
-<li>Fill in session settings</li>
-</ol>
-<p>Fill in your “remote host,” which will be the IP address from earlier. Then select
-“specify username” and enter your cyverse username.</p>
-<ol class="arabic simple" start="22">
-<li>Click OK</li>
-</ol>
-<p>Victory!</p>
+<div class="section" id="suspend-instance">
+<h2>8.3. Suspend Instance<a class="headerlink" href="#suspend-instance" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/maintain2.png" src="_images/maintain2.png" /></p>
+<p><strong>Note: It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it. Notice: IP address changes</strong></p>
+</div>
+<div class="section" id="request-more-aus">
+<h2>8.4. Request More AUs<a class="headerlink" href="#request-more-aus" title="Permalink to this headline">¶</a></h2>
+<p><img alt="_images/maintain4.png" src="_images/maintain4.png" /></p>
+</div>
+</div>
+<div class="section" id="additional-features">
+<h1>9. Additional Features<a class="headerlink" href="#additional-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="web-shell">
+<h2>9.1. Web Shell<a class="headerlink" href="#web-shell" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Access Command-Line Directly from your browser</li>
+</ul>
+<p><img alt="_images/additional1.png" src="_images/additional1.png" /></p>
+</div>
+<div class="section" id="web-desktop">
+<h2>9.2. Web Desktop<a class="headerlink" href="#web-desktop" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Access your instance through a web desktop version from your browser</li>
+</ul>
+<p><img alt="_images/additional2.png" src="_images/additional2.png" /></p>
+</div>
+<div class="section" id="custom-images">
+<h2>9.3. Custom Images<a class="headerlink" href="#custom-images" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="deposit-rsa-key">
+<h2>9.4. Deposit rsa-key<a class="headerlink" href="#deposit-rsa-key" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Concerning Keys:
+Cryptographic keys are a convenient and secure way to authenticate without having to use passwords. They consist of a pair of files called the public and private keys: the public part can be shared with whoever you’d like to authenticate with (in our case, CyVerse Atmosphere!), and the private part is kept “secret” on your machine. Things that are encrypted with the public key can be be decrypted with the private key, but it is computationally intractable (ie, it would take on the order of thousands of years) to determine a private key from a public key. You can read more about it <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">here</a></li>
+<li>Create the RSA Key Pair on your laptop/computer:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa
+</pre></div>
+</div>
+<ul class="simple">
+<li>Store the Keys and Passphrase. Once you have entered the Gen Key command, you will get a few more questions:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+</pre></div>
+</div>
+<ul class="simple">
+<li>You can press enter here, saving the file to the user home (in this case, my example user is called demo).</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Enter passphrase (empty for no passphrase):
+</pre></div>
+</div>
+<ul class="simple">
+<li>It’s up to you whether you want to use a passphrase though we recommend NOT to!.</li>
+<li>The public key is now located in /home/demo/.ssh/id_rsa.pub. The private key (identification) is now located in /home/demo/.ssh/id_rsa</li>
+<li>Copy the Public Key</li>
+<li>Once the key pair is generated, it’s time to place the public key on the server that we want to use.</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<ul class="simple">
+<li>Copy all of the text that constitutes your public key and we will place it in our Atmosphere accounts.</li>
+</ul>
+<p><img alt="_images/additional3.png" src="_images/additional3.png" />
+<img alt="_images/additional4.png" src="_images/additional4.png" />
+<img alt="_images/additional5.png" src="_images/additional5.png" />
+<img alt="_images/additional6.png" src="_images/additional6.png" /></p>
+</div>
 </div>
 
 
@@ -305,7 +327,7 @@ and run it.</p>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="bash_lesson.html" title="next chapter (use the right arrow)">5. Using the command line</a>
+        <a class="btn btn-default" href="bash_lesson.html" title="next chapter (use the right arrow)">10. Using the command line</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -320,7 +342,7 @@ and run it.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="bash_lesson.html" title="5. Using the command line"
+          <a href="bash_lesson.html" title="10. Using the command line"
              >next</a> |</li>
         <li class="right" >
           <a href="intro.html" title="3. Introductions"
@@ -335,7 +357,7 @@ and run it.</p>
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2019, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2019, Elias Oziolor, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>
