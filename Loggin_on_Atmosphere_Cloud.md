@@ -188,7 +188,29 @@ $ cat ~/.ssh/id_rsa.pub
 
 - Copy all of the text that constitutes your public key and we will place it in our Atmosphere accounts.
 
-![](/img/additional3.png)
+
 ![](/img/additional4.png)
 ![](/img/additional5.png)
 ![](/img/additional6.png)
+
+- **Deposit key on Atmosphere**
+
+- You are now ready to deposit your generated public key onto your Atmosphere account, to gain secure login each time you build and use an instance on Atmosphere.
+
+- Click on your username on the Atmosphere page and navigate to 'Settings' page
+
+![](/img/additional3.png)
+
+- Scroll down to the advanced section and click on 'Show More'
+
+![](/img/additional4.png)
+
+- In the 'SSH Configuration' section, click on the '+' sign 
+
+![](/img/additional5.png)
+
+- Paste your public key generated earlier and give this key a name
+
+![](/img/additional6.png)
+
+- **You can now securely login to all the instances you launch on Atmosphere without having to type your password each-time you ssh login.**
