@@ -59,7 +59,7 @@ Logging onto Atmosphere Cloud
 - Basic options
 	- 	Instance Name: e.x., "workshop" or you can leave it default which is the image name.
 
-	-	Base Image Version: "2.0"
+	-	Base Image Version: "3.0"
 
 	-	Project: select project folder to host the instance
 
@@ -187,11 +187,6 @@ $ cat ~/.ssh/id_rsa.pub
 ```
 
 - Copy all of the text that constitutes your public key and we will place it in our Atmosphere accounts.
-
-
-![](/img/additional4.png)
-![](/img/additional5.png)
-![](/img/additional6.png)
 
 - **Deposit key on Atmosphere**
 
