@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Accessing The Atmosphere Cloud &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <title>4. Accessing The Atmosphere Cloud &#8212; 2019-UNR-omics 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -26,6 +26,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Using the command line" href="bash_lesson.html" />
+    <link rel="prev" title="3. Introductions" href="intro.html" />
   
    
 
@@ -36,6 +38,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bash_lesson.html" title="10. Using the command line"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="3. Introductions"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>
@@ -51,25 +59,25 @@
     <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
-<li><a class="reference internal" href="#">Accessing The Atmosphere Cloud</a></li>
-<li><a class="reference internal" href="#login-launch-instance">Login &amp; Launch Instance</a></li>
-<li><a class="reference internal" href="#ssh-secure-login">SSH Secure-Login</a></li>
-<li><a class="reference internal" href="#instance-maintenance">Instance Maintenance</a><ul>
-<li><a class="reference internal" href="#atmosphere-dashboard">Atmosphere Dashboard</a></li>
-<li><a class="reference internal" href="#suspend-instance">Suspend Instance</a></li>
-<li><a class="reference internal" href="#delete-instance">Delete Instance</a></li>
+<li><a class="reference internal" href="#">4. Accessing The Atmosphere Cloud</a></li>
+<li><a class="reference internal" href="#login-launch-instance">5. Login &amp; Launch Instance</a></li>
+<li><a class="reference internal" href="#ssh-secure-login">6. SSH Secure-Login</a></li>
+<li><a class="reference internal" href="#instance-maintenance">7. Instance Maintenance</a><ul>
+<li><a class="reference internal" href="#atmosphere-dashboard">7.1. Atmosphere Dashboard</a></li>
+<li><a class="reference internal" href="#suspend-instance">7.2. Suspend Instance</a></li>
+<li><a class="reference internal" href="#delete-instance">7.3. Delete Instance</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#additional-features">Additional Features</a><ul>
-<li><a class="reference internal" href="#did-you-know-you-can-access-a-shell-terminal-and-a-web-desktop-via-your-browser">Did you know you can access a shell terminal and a web-desktop via your browser ???</a><ul>
-<li><a class="reference internal" href="#web-shell">Web Shell</a></li>
-<li><a class="reference internal" href="#web-desktop">Web Desktop</a></li>
+<li><a class="reference internal" href="#additional-features">8. Additional Features</a><ul>
+<li><a class="reference internal" href="#did-you-know-you-can-access-a-shell-terminal-and-a-web-desktop-via-your-browser">8.1. Did you know you can access a shell terminal and a web-desktop via your browser ???</a><ul>
+<li><a class="reference internal" href="#web-shell">8.1.1. Web Shell</a></li>
+<li><a class="reference internal" href="#web-desktop">8.1.2. Web Desktop</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#advanced-topics">Advanced Topics</a><ul>
-<li><a class="reference internal" href="#atmosphere-advanced-topics">Atmosphere Advanced Topics</a></li>
+<li><a class="reference internal" href="#advanced-topics">9. Advanced Topics</a><ul>
+<li><a class="reference internal" href="#atmosphere-advanced-topics">9.1. Atmosphere Advanced Topics</a></li>
 </ul>
 </li>
 </ul>
@@ -77,6 +85,12 @@
     </div>
   </div>
 </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="previous chapter">3. Introductions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bash_lesson.html"
+                        title="next chapter">10. Using the command line</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -106,14 +120,14 @@
             <ol class="breadcrumb">
               <li><a href="toc.html">Docs</a></li>
               
-              <li>Accessing The Atmosphere Cloud</li>
+              <li>4. Accessing The Atmosphere Cloud</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="accessing-the-atmosphere-cloud">
-<h1>Accessing The Atmosphere Cloud<a class="headerlink" href="#accessing-the-atmosphere-cloud" title="Permalink to this headline">¶</a></h1>
+<h1>4. Accessing The Atmosphere Cloud<a class="headerlink" href="#accessing-the-atmosphere-cloud" title="Permalink to this headline">¶</a></h1>
 <p><strong>Atmosphere, CyVerse’s cloud-computing platform allows you to launch your own isolated virtual machine (VM) image and software, using compute resources such as CyVerse-provided software suites, and pre-configured, frequently used analysis routines, relevant algorithms, and datasets.</strong></p>
 <blockquote>
 <div>To request access to Atmosphere, login to the <a class="reference external" href="https://user.cyverse.org/">CyVerse User Portal</a>. In the <a class="reference external" href="https://user.cyverse.org/services/mine%3E">Services</a> menu under ‘MY SERVICES’ you should see Atmosphere listed as an option you can launch. If not, look uner the <a class="reference external" href="https://user.cyverse.org/services/available">Available</a> menu, and click the ‘REQUEST ACCESS’ link. You will receive an email requesting additional information.</div></blockquote>
@@ -125,7 +139,7 @@
 <div><strong>NOTE: WINDOWS users</strong> will need to install a UNIX-ready terminal to SSH-login (if you haven’t already). We recommend - <a class="reference external" href="http://mobaxterm.mobatek.net/download-home-edition.html">mobaxterm home edition</a></div></blockquote>
 </div>
 <div class="section" id="login-launch-instance">
-<h1>Login &amp; Launch Instance<a class="headerlink" href="#login-launch-instance" title="Permalink to this headline">¶</a></h1>
+<h1>5. Login &amp; Launch Instance<a class="headerlink" href="#login-launch-instance" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><strong>Login to <a class="reference external" href="https://atmo.cyverse.org/application/images">Atmosphere</a> by clicking the “login” button towards the right-upper corner of the screen.</strong></li>
 </ul>
@@ -179,7 +193,7 @@
 <div><strong>Great! We have now built our very own remote virtual machine with all the software pre-installed. Next we will use SSH-Secure-Login to access these remote instances from our laptop’s.</strong></div></blockquote>
 </div>
 <div class="section" id="ssh-secure-login">
-<h1>SSH Secure-Login<a class="headerlink" href="#ssh-secure-login" title="Permalink to this headline">¶</a></h1>
+<h1>6. SSH Secure-Login<a class="headerlink" href="#ssh-secure-login" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li>MACOS &amp; LINUX users can open a Terminal window now.</li>
 <li>Windows users start a new session in <a class="reference external" href="http://mobaxterm.mobatek.net/download-home-edition.html">mobaxterm</a><ul>
@@ -201,20 +215,20 @@
 <div><strong>Success !!! We have established connections with our instances. Proceed to the Tutorial section.</strong></div></blockquote>
 </div>
 <div class="section" id="instance-maintenance">
-<h1>Instance Maintenance<a class="headerlink" href="#instance-maintenance" title="Permalink to this headline">¶</a></h1>
+<h1>7. Instance Maintenance<a class="headerlink" href="#instance-maintenance" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div>To end your current session on an Instance and close SSH connection, type ‘exit’</div></blockquote>
 <div class="section" id="atmosphere-dashboard">
-<h2>Atmosphere Dashboard<a class="headerlink" href="#atmosphere-dashboard" title="Permalink to this headline">¶</a></h2>
+<h2>7.1. Atmosphere Dashboard<a class="headerlink" href="#atmosphere-dashboard" title="Permalink to this headline">¶</a></h2>
 <p><img alt="_images/atmosphere_dashboard.png" src="_images/atmosphere_dashboard.png" /></p>
 </div>
 <div class="section" id="suspend-instance">
-<h2>Suspend Instance<a class="headerlink" href="#suspend-instance" title="Permalink to this headline">¶</a></h2>
+<h2>7.2. Suspend Instance<a class="headerlink" href="#suspend-instance" title="Permalink to this headline">¶</a></h2>
 <p><img alt="_images/suspend.png" src="_images/suspend.png" /></p>
 <p><strong>Note: It is advisable to delete the machine if you are not planning to use it in future to save valuable resources. However if you want to use it in future, you can suspend it. Notice: IP address changes</strong></p>
 </div>
 <div class="section" id="delete-instance">
-<h2>Delete Instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
+<h2>7.3. Delete Instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><strong>To completely remove your instance, you can select the “Delete” button from the instance details page.</strong></li>
 <li><strong>This will open up a dialogue window. Select the “Yes, delete this instance” button.</strong></li>
@@ -224,18 +238,18 @@
 </div>
 </div>
 <div class="section" id="additional-features">
-<h1>Additional Features<a class="headerlink" href="#additional-features" title="Permalink to this headline">¶</a></h1>
+<h1>8. Additional Features<a class="headerlink" href="#additional-features" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="did-you-know-you-can-access-a-shell-terminal-and-a-web-desktop-via-your-browser">
-<h2>Did you know you can access a shell terminal and a web-desktop via your browser ???<a class="headerlink" href="#did-you-know-you-can-access-a-shell-terminal-and-a-web-desktop-via-your-browser" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Did you know you can access a shell terminal and a web-desktop via your browser ???<a class="headerlink" href="#did-you-know-you-can-access-a-shell-terminal-and-a-web-desktop-via-your-browser" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="web-shell">
-<h3>Web Shell<a class="headerlink" href="#web-shell" title="Permalink to this headline">¶</a></h3>
+<h3>8.1.1. Web Shell<a class="headerlink" href="#web-shell" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Access Command-Line Directly from your browser</li>
 </ul>
 <p><img alt="_images/webshell.png" src="_images/webshell.png" /></p>
 </div>
 <div class="section" id="web-desktop">
-<h3>Web Desktop<a class="headerlink" href="#web-desktop" title="Permalink to this headline">¶</a></h3>
+<h3>8.1.2. Web Desktop<a class="headerlink" href="#web-desktop" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Access your instance through a web desktop version from your browser</li>
 </ul>
@@ -244,9 +258,9 @@
 </div>
 </div>
 <div class="section" id="advanced-topics">
-<h1>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h1>
+<h1>9. Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="atmosphere-advanced-topics">
-<h2><a class="reference external" href="https://unr-omics.readthedocs.io/en/latest/advanced_atmosphere.html">Atmosphere Advanced Topics</a><a class="headerlink" href="#atmosphere-advanced-topics" title="Permalink to this headline">¶</a></h2>
+<h2>9.1. <a class="reference external" href="https://unr-omics.readthedocs.io/en/latest/advanced_atmosphere.html">Atmosphere Advanced Topics</a><a class="headerlink" href="#atmosphere-advanced-topics" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>How do I transfer Data to and from my remote instances on Atmosphere?</li>
 <li>How can I create custom Atmosphere Images for my personal use?</li>
@@ -258,6 +272,18 @@
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="intro.html" title="previous chapter (use the left arrow)">3. Introductions</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="bash_lesson.html" title="next chapter (use the right arrow)">10. Using the command line</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -267,6 +293,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="bash_lesson.html" title="10. Using the command line"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="intro.html" title="3. Introductions"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
     </div>
