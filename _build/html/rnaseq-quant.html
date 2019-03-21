@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>15. Read Quantification &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <title>9. Read Quantification &#8212; 2019-UNR-omics 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="16. Differential expression analysis with DESeq2" href="DE.html" />
-    <link rel="prev" title="14. De novo transcriptome assembly" href="transcriptome-assembly.html" />
+    <link rel="next" title="10. Differential expression analysis with DESeq2" href="DE.html" />
+    <link rel="prev" title="8. De novo transcriptome assembly" href="transcriptome-assembly.html" />
   
    
 
@@ -39,10 +39,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="DE.html" title="16. Differential expression analysis with DESeq2"
+          <a href="DE.html" title="10. Differential expression analysis with DESeq2"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="transcriptome-assembly.html" title="14. De novo transcriptome assembly"
+          <a href="transcriptome-assembly.html" title="8. De novo transcriptome assembly"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -59,13 +59,13 @@
     <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
-<li><a class="reference internal" href="#">15. Read Quantification</a><ul>
-<li><a class="reference internal" href="#make-a-new-working-directory-and-link-the-trimmed-reads-and-assembly">15.1. Make a new working directory and link the trimmed reads and assembly</a></li>
-<li><a class="reference internal" href="#index-the-assembly">15.2. Index the assembly:</a></li>
-<li><a class="reference internal" href="#run-salmon-on-all-the-samples">15.3. Run salmon on all the samples:</a></li>
-<li><a class="reference internal" href="#take-a-look-at-quant-output">15.4. Take a look at quant output</a></li>
-<li><a class="reference internal" href="#look-at-all-the-mapping-rates">15.5. Look at all the mapping rates:</a></li>
-<li><a class="reference internal" href="#more-reading">15.6. More reading</a></li>
+<li><a class="reference internal" href="#">9. Read Quantification</a><ul>
+<li><a class="reference internal" href="#make-a-new-working-directory-and-link-the-trimmed-reads-and-assembly">9.1. Make a new working directory and link the trimmed reads and assembly</a></li>
+<li><a class="reference internal" href="#index-the-assembly">9.2. Index the assembly:</a></li>
+<li><a class="reference internal" href="#run-salmon-on-all-the-samples">9.3. Run salmon on all the samples:</a></li>
+<li><a class="reference internal" href="#take-a-look-at-quant-output">9.4. Take a look at quant output</a></li>
+<li><a class="reference internal" href="#look-at-all-the-mapping-rates">9.5. Look at all the mapping rates:</a></li>
+<li><a class="reference internal" href="#more-reading">9.6. More reading</a></li>
 </ul>
 </li>
 </ul>
@@ -75,10 +75,10 @@
 </div>
   <h4>Previous topic</h4>
   <p class="topless"><a href="transcriptome-assembly.html"
-                        title="previous chapter">14. De novo transcriptome assembly</a></p>
+                        title="previous chapter">8. De novo transcriptome assembly</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="DE.html"
-                        title="next chapter">16. Differential expression analysis with DESeq2</a></p>
+                        title="next chapter">10. Differential expression analysis with DESeq2</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -108,21 +108,21 @@
             <ol class="breadcrumb">
               <li><a href="toc.html">Docs</a></li>
               
-              <li>15. Read Quantification</li>
+              <li>9. Read Quantification</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="read-quantification">
-<h1>15. Read Quantification<a class="headerlink" href="#read-quantification" title="Permalink to this headline">¶</a></h1>
+<h1>9. Read Quantification<a class="headerlink" href="#read-quantification" title="Permalink to this headline">¶</a></h1>
 <p>Learning objectives:</p>
 <ul class="simple">
 <li>Learn mapping and differential gene expression analysis of rna-seq data</li>
 <li>Interpret rna-seq analysis results</li>
 </ul>
 <div class="section" id="make-a-new-working-directory-and-link-the-trimmed-reads-and-assembly">
-<h2>15.1. Make a new working directory and link the trimmed reads and assembly<a class="headerlink" href="#make-a-new-working-directory-and-link-the-trimmed-reads-and-assembly" title="Permalink to this headline">¶</a></h2>
+<h2>9.1. Make a new working directory and link the trimmed reads and assembly<a class="headerlink" href="#make-a-new-working-directory-and-link-the-trimmed-reads-and-assembly" title="Permalink to this headline">¶</a></h2>
 <p>We will be using the same trimmed fastq data as before (<a class="reference external" href="https://evodevojournal.biomedcentral.com/articles/10.1186/2041-9139-4-16">Tulin et al., 2013</a>).</p>
 <p>The following commands will create a new folder <code class="docutils literal notranslate"><span class="pre">rnaseq</span></code> and link the data in:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
@@ -138,13 +138,13 @@
 <p>Note that this is a previously-assembly <code class="docutils literal notranslate"><span class="pre">Trinity.fasta</span></code> file that the whole class will use. Why is this important?</p>
 </div>
 <div class="section" id="index-the-assembly">
-<h2>15.2. Index the assembly:<a class="headerlink" href="#index-the-assembly" title="Permalink to this headline">¶</a></h2>
+<h2>9.2. Index the assembly:<a class="headerlink" href="#index-the-assembly" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">salmon</span> <span class="n">index</span> <span class="o">--</span><span class="n">index</span> <span class="n">nema</span> <span class="o">--</span><span class="nb">type</span> <span class="n">quasi</span> <span class="o">--</span><span class="n">transcripts</span> <span class="n">Trinity</span><span class="o">.</span><span class="n">fasta</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="run-salmon-on-all-the-samples">
-<h2>15.3. Run salmon on all the samples:<a class="headerlink" href="#run-salmon-on-all-the-samples" title="Permalink to this headline">¶</a></h2>
+<h2>9.3. Run salmon on all the samples:<a class="headerlink" href="#run-salmon-on-all-the-samples" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>What are the flags used in the salmon command?</li>
 <li>Read up on <a class="reference external" href="https://salmon.readthedocs.io/en/latest/salmon.html#what-s-this-libtype">libtype, here</a>.</li>
@@ -161,7 +161,7 @@ done
 </div>
 </div>
 <div class="section" id="take-a-look-at-quant-output">
-<h2>15.4. Take a look at quant output<a class="headerlink" href="#take-a-look-at-quant-output" title="Permalink to this headline">¶</a></h2>
+<h2>9.4. Take a look at quant output<a class="headerlink" href="#take-a-look-at-quant-output" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/ngs-docs/2015-nov-adv-rna/blob/master/salmon.rst">Examples of exploring the output</a></li>
 </ul>
@@ -170,13 +170,13 @@ done
 </div>
 </div>
 <div class="section" id="look-at-all-the-mapping-rates">
-<h2>15.5. Look at all the mapping rates:<a class="headerlink" href="#look-at-all-the-mapping-rates" title="Permalink to this headline">¶</a></h2>
+<h2>9.5. Look at all the mapping rates:<a class="headerlink" href="#look-at-all-the-mapping-rates" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> \<span class="n">salmon_quant</span><span class="o">.</span><span class="n">log</span> <span class="o">-</span><span class="n">exec</span> <span class="n">grep</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Mapping rate&quot;</span> <span class="p">{}</span> \<span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="more-reading">
-<h2>15.6. More reading<a class="headerlink" href="#more-reading" title="Permalink to this headline">¶</a></h2>
+<h2>9.6. More reading<a class="headerlink" href="#more-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Schurch et al. 2016. <a class="reference external" href="http://rnajournal.cshlp.org/content/22/6/839">“How many biological replicates are needed in an RNA-seq experiment and which differential expression tool should you use?”</a>.</li>
 <li>Patro et al. 2017 <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5600148/">“Salmon provides accurate, fast, and bias-aware transcript expression estimates using dual-phase inference”</a>.</li>
@@ -191,11 +191,11 @@ done
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="transcriptome-assembly.html" title="previous chapter (use the left arrow)">14. De novo transcriptome assembly</a>
+        <a class="btn btn-default" href="transcriptome-assembly.html" title="previous chapter (use the left arrow)">8. De novo transcriptome assembly</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="DE.html" title="next chapter (use the right arrow)">16. Differential expression analysis with DESeq2</a>
+        <a class="btn btn-default" href="DE.html" title="next chapter (use the right arrow)">10. Differential expression analysis with DESeq2</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -210,10 +210,10 @@ done
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="DE.html" title="16. Differential expression analysis with DESeq2"
+          <a href="DE.html" title="10. Differential expression analysis with DESeq2"
              >next</a> |</li>
         <li class="right" >
-          <a href="transcriptome-assembly.html" title="14. De novo transcriptome assembly"
+          <a href="transcriptome-assembly.html" title="8. De novo transcriptome assembly"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>

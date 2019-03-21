@@ -6,19 +6,19 @@ Table of contents
    :numbered:
 
    index.md
-   
+
    code_of_conduct.md
 
    intro.md
-   
+
    Loggin_on_Atmosphere_Cloud.md
 
    bash_lesson.md
-   
+
    bioconda-config.md
 
    quality-trimming.md
-   
+
    git_lesson.md
 
    transcriptome-assembly.md
@@ -26,5 +26,7 @@ Table of contents
    rnaseq-quant.md
 
    DE.md
-   
+
+   advanced_atmosphere.md
+
    backup.md

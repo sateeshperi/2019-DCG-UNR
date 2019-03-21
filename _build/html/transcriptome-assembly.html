@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>14. De novo transcriptome assembly &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <title>8. De novo transcriptome assembly &#8212; 2019-UNR-omics 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="15. Read Quantification" href="rnaseq-quant.html" />
-    <link rel="prev" title="13. GitHub: How not to lose your entire analysis!" href="git_lesson.html" />
+    <link rel="next" title="9. Read Quantification" href="rnaseq-quant.html" />
+    <link rel="prev" title="7. GitHub: How not to lose your entire analysis!" href="git_lesson.html" />
   
    
 
@@ -39,10 +39,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="rnaseq-quant.html" title="15. Read Quantification"
+          <a href="rnaseq-quant.html" title="9. Read Quantification"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="git_lesson.html" title="13. GitHub: How not to lose your entire analysis!"
+          <a href="git_lesson.html" title="7. GitHub: How not to lose your entire analysis!"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -59,11 +59,11 @@
     <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
-<li><a class="reference internal" href="#">14. De novo transcriptome assembly</a><ul>
-<li><a class="reference internal" href="#link-in-the-trimmed-data">14.1. Link in the trimmed data</a></li>
-<li><a class="reference internal" href="#run-the-assembler">14.2. Run the assembler</a></li>
-<li><a class="reference internal" href="#looking-at-the-assembly">14.3. Looking at the assembly</a></li>
-<li><a class="reference internal" href="#suggestions-for-next-steps">14.4. Suggestions for next steps</a></li>
+<li><a class="reference internal" href="#">8. De novo transcriptome assembly</a><ul>
+<li><a class="reference internal" href="#link-in-the-trimmed-data">8.1. Link in the trimmed data</a></li>
+<li><a class="reference internal" href="#run-the-assembler">8.2. Run the assembler</a></li>
+<li><a class="reference internal" href="#looking-at-the-assembly">8.3. Looking at the assembly</a></li>
+<li><a class="reference internal" href="#suggestions-for-next-steps">8.4. Suggestions for next steps</a></li>
 </ul>
 </li>
 </ul>
@@ -73,10 +73,10 @@
 </div>
   <h4>Previous topic</h4>
   <p class="topless"><a href="git_lesson.html"
-                        title="previous chapter">13. GitHub: How not to lose your entire analysis!</a></p>
+                        title="previous chapter">7. GitHub: How not to lose your entire analysis!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="rnaseq-quant.html"
-                        title="next chapter">15. Read Quantification</a></p>
+                        title="next chapter">9. Read Quantification</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -106,14 +106,14 @@
             <ol class="breadcrumb">
               <li><a href="toc.html">Docs</a></li>
               
-              <li>14. De novo transcriptome assembly</li>
+              <li>8. De novo transcriptome assembly</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="de-novo-transcriptome-assembly">
-<h1>14. De novo transcriptome assembly<a class="headerlink" href="#de-novo-transcriptome-assembly" title="Permalink to this headline">¶</a></h1>
+<h1>8. De novo transcriptome assembly<a class="headerlink" href="#de-novo-transcriptome-assembly" title="Permalink to this headline">¶</a></h1>
 <p>Learning objectives:</p>
 <ul class="simple">
 <li>What is transcriptome assembly?</li>
@@ -125,7 +125,7 @@
 <p>The answer is <em>de novo</em> assembly. The basic idea with <em>de novo</em> transcriptome assembly is you feed in your reads and you get out a bunch of <em>contigs</em> that represent transcripts, or stretches of RNA present in the reads that don’t have any long repeats or much significant polymorphism. You run a  <em>de novo</em> transcriptome assembly program using the trimmed reads as input and get out a pile of assembled RNA.</p>
 <p>Trinity, one of the leading <em>de novo</em> transcriptome assemblers, was developed at the <a class="reference external" href="http://www.broadinstitute.org/">Broad Institute</a> and the <a class="reference external" href="http://www.cs.huji.ac.il/">Hebrew University of Jerusalem</a>. We will be losely following steps from the <a class="reference external" href="https://eel-pond.readthedocs.io/en/latest">Eel pond protocol</a> for our guide to doing RNA-seq assembly.</p>
 <div class="section" id="link-in-the-trimmed-data">
-<h2>14.1. Link in the trimmed data<a class="headerlink" href="#link-in-the-trimmed-data" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Link in the trimmed data<a class="headerlink" href="#link-in-the-trimmed-data" title="Permalink to this headline">¶</a></h2>
 <p>We will be using the same set of <em>Nematostella vectensis</em> mRNAseq reads that we trimmed in the last lesson from <a class="reference external" href="https://evodevojournal.biomedcentral.com/articles/10.1186/2041-9139-4-16">Tulin et al., 2013</a>.</p>
 <p>The following commands will create a new folder <code class="docutils literal notranslate"><span class="pre">assembly</span></code> and link the trimmed data we prepared earlier in the newly created folder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd ~/work
@@ -143,7 +143,7 @@ ls
 </div>
 </div>
 <div class="section" id="run-the-assembler">
-<h2>14.2. Run the assembler<a class="headerlink" href="#run-the-assembler" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Run the assembler<a class="headerlink" href="#run-the-assembler" title="Permalink to this headline">¶</a></h2>
 <p>Trinity works both with paired-end reads as well as single-end reads (including simultaneously both types at the same time). In the general case, the paired-end files are defined as <code class="docutils literal notranslate"><span class="pre">--left</span> <span class="pre">left.fq</span></code> and <code class="docutils literal notranslate"><span class="pre">--right</span> <span class="pre">right.fq</span></code> respectively. The single-end reads (a.k.a <em>orphans</em>) are defined by the flag <code class="docutils literal notranslate"><span class="pre">--single</span></code>.</p>
 <p>So let’s run the assembler as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="n">Trinity</span> <span class="o">--</span><span class="n">seqType</span> <span class="n">fq</span> <span class="o">--</span><span class="n">max_memory</span> <span class="mi">15</span><span class="n">G</span> <span class="o">--</span><span class="n">CPU</span> <span class="mi">4</span> <span class="o">--</span><span class="n">left</span> <span class="n">left</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">right</span> <span class="n">right</span><span class="o">.</span><span class="n">fq</span><span class="o">.</span><span class="n">gz</span> <span class="o">--</span><span class="n">output</span> <span class="n">nema_trinity</span>
@@ -173,7 +173,7 @@ ls
 <p>at the end.</p>
 </div>
 <div class="section" id="looking-at-the-assembly">
-<h2>14.3. Looking at the assembly<a class="headerlink" href="#looking-at-the-assembly" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. Looking at the assembly<a class="headerlink" href="#looking-at-the-assembly" title="Permalink to this headline">¶</a></h2>
 <p>First, save the assembly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">nema_trinity</span><span class="o">/</span><span class="n">Trinity</span><span class="o">.</span><span class="n">fasta</span> <span class="n">nema</span><span class="o">-</span><span class="n">transcriptome</span><span class="o">-</span><span class="n">assembly</span><span class="o">.</span><span class="n">fa</span>
 </pre></div>
@@ -228,7 +228,7 @@ ls
 <p>This is a set of summary stats about your assembly. Are they good? Bad? How would you know?</p>
 </div>
 <div class="section" id="suggestions-for-next-steps">
-<h2>14.4. Suggestions for next steps<a class="headerlink" href="#suggestions-for-next-steps" title="Permalink to this headline">¶</a></h2>
+<h2>8.4. Suggestions for next steps<a class="headerlink" href="#suggestions-for-next-steps" title="Permalink to this headline">¶</a></h2>
 <p>After generating a <em>de novo</em> transcriptome assembly:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://angus.readthedocs.io/en/2018/dammit_annotation.html">annotation</a></li>
@@ -243,11 +243,11 @@ ls
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="git_lesson.html" title="previous chapter (use the left arrow)">13. GitHub: How not to lose your entire analysis!</a>
+        <a class="btn btn-default" href="git_lesson.html" title="previous chapter (use the left arrow)">7. GitHub: How not to lose your entire analysis!</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="rnaseq-quant.html" title="next chapter (use the right arrow)">15. Read Quantification</a>
+        <a class="btn btn-default" href="rnaseq-quant.html" title="next chapter (use the right arrow)">9. Read Quantification</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -262,10 +262,10 @@ ls
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="rnaseq-quant.html" title="15. Read Quantification"
+          <a href="rnaseq-quant.html" title="9. Read Quantification"
              >next</a> |</li>
         <li class="right" >
-          <a href="git_lesson.html" title="13. GitHub: How not to lose your entire analysis!"
+          <a href="git_lesson.html" title="7. GitHub: How not to lose your entire analysis!"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
       </ul>

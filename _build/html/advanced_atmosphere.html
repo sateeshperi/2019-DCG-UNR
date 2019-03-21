@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>11. Advanced Topics &#8212; 2019-UNR-omics 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="17. Backup files" href="backup.html" />
+    <link rel="prev" title="10. Differential expression analysis with DESeq2" href="DE.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="backup.html" title="17. Backup files"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DE.html" title="10. Differential expression analysis with DESeq2"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">11. Advanced Topics</a></li>
+<li><a class="reference internal" href="#transferring-data-to-and-from-an-instance">12. Transferring Data to and from an Instance</a><ul>
+<li><a class="reference internal" href="#transferring-data-using-icommands">12.1. <strong>Transferring Data using iCommands</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#creating-custom-atmosphere-images">13. Creating custom Atmosphere Images</a></li>
+<li><a class="reference internal" href="#ssh-rsa-key-for-password-less-login">14. ssh-rsa-key for password-less login</a></li>
+<li><a class="reference internal" href="#tmux-screen">15. Tmux &amp; Screen</a></li>
+<li><a class="reference internal" href="#ssh-remote-host-id-changed-error">16. SSH Remote host ID Changed Error</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="DE.html"
+                        title="previous chapter">10. Differential expression analysis with DESeq2</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="backup.html"
+                        title="next chapter">17. Backup files</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/advanced_atmosphere.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="toc.html">Docs</a></li>
+              
+              <li>11. Advanced Topics</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="advanced-topics">
+<h1>11. Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="transferring-data-to-and-from-an-instance">
+<h1>12. Transferring Data to and from an Instance<a class="headerlink" href="#transferring-data-to-and-from-an-instance" title="Permalink to this headline">¶</a></h1>
+<p><strong>An Atmosphere instance only contains data that were included in the original image that was used to make that instance. You can transfer data to/from the CyVerse Data Store, an Atmosphere Volume, a sever, or your local machine.</strong></p>
+<div class="section" id="transferring-data-using-icommands">
+<h2>12.1. <strong>Transferring Data using iCommands</strong><a class="headerlink" href="#transferring-data-using-icommands" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://cyverse-data-store-guide.readthedocs-hosted.com/en/latest/step2.html"><strong>iCommands Guide:</strong></a></li>
+<li><a class="reference external" href="https://wiki.cyverse.org/wiki/display/DS/Setting+Up+iCommands"><strong>iCommands Download:</strong></a></li>
+</ul>
+<blockquote>
+<div>iCommands is installed on every Atmosphere instance by default</div></blockquote>
+<ul class="simple">
+<li>Open terminal, start the iCommands configuration using the command <code class="docutils literal notranslate"><span class="pre">iinit</span></code> command and enter configure.</li>
+</ul>
+<blockquote>
+<div>Note: This configuration is a one-time step on your first use with this instance.</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ iinit
+# As prompted, enter the following values:
+$ **Host: data.cyverse.org**
+$ **Port: 1247**
+$ **User: your_cyverse_username**
+$ **Zone: iplant**
+$ **Password: your_cyverse_password**
+</pre></div>
+</div>
+<blockquote>
+<div>If you make a mistake in your configuration you can edit <code class="docutils literal notranslate"><span class="pre">~/.irods/irods_environment.json</span></code> on your instance.</div></blockquote>
+<ul class="simple">
+<li>Verify that your iCommands installation works and is properly configured using the ‘ils’ command to list the contents of your Data Store home directory</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ils
+</pre></div>
+</div>
+<ul class="simple">
+<li>To download a file from the Data Store to your instance, use “iget”</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ iget -option data_store_file
+</pre></div>
+</div>
+<blockquote>
+<div>‘-r’ - recursive transfer of directories and their contents</div></blockquote>
+<p>‘-P’ - display the progress of the upload</p>
+<p>‘-f’ - force the upload and overwrite</p>
+<ul class="simple">
+<li>To upload file from your instance to the Data Store use “iput”</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ iput -option file_on_instance location_on_data_store
+</pre></div>
+</div>
+<ul class="simple">
+<li>Additional Frequently used iCommands</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ipwd print current directory
+$ imkdir create directory
+$ icd # change directory
+</pre></div>
+</div>
+<blockquote>
+<div>iCommands has a variety of options, to see progress of transfers, operate recursively, and more. See additional <a class="reference external" href="https://wiki.cyverse.org/wiki/display/DS/Using+iCommands">iCommands documentation</a> on the CyVerse wiki.</div></blockquote>
+</div>
+</div>
+<div class="section" id="creating-custom-atmosphere-images">
+<h1>13. Creating custom Atmosphere Images<a class="headerlink" href="#creating-custom-atmosphere-images" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="https://atmo.cyverse.org/application/images/1687">Snakemake2019 v1.0 Image</a></li>
+<li><a class="reference external" href="https://hackmd.io/im0eDxViQgmxTL4zYBfGoQ#">Jetstream</a></li>
+<li><a class="reference external" href="https://atmo.cyverse.org/application/images/1552">Ubuntu 18.04 NO-GUI Atmosphere Image</a></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /opt
+
+sudo su
+
+ezd
+
+ezs
+
+apt-get install debootstrap
+
+curl -O -L https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh #install in /opt/miniconda3
+
+echo export PATH=$PATH:/opt/miniconda3/bin &gt;&gt; ~/.bashrc
+source ~/.bashrc
+
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+
+conda install -y fastqc multiqc trimmomatic trinity time salmon
+
+apt-get install tree sl
+
+apt-get update &amp;&amp; sudo apt-get -y install gdebi-core r-base
+
+wget https://download2.rstudio.org/rstudio-server-1.1.463-amd64.deb
+gdebi -n rstudio-server-1.1.463-amd64.deb
+
+RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver)
+
+`echo http://$(hostname):8787/`
+</pre></div>
+</div>
+</div>
+<div class="section" id="ssh-rsa-key-for-password-less-login">
+<h1>14. ssh-rsa-key for password-less login<a class="headerlink" href="#ssh-rsa-key-for-password-less-login" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Cryptographic keys are a convenient and secure way to authenticate without having to use passwords. They consist of a pair of files called the public and private keys: the public part can be shared with whoever you’d like to authenticate with (in our case, CyVerse Atmosphere!), and the private part is kept “secret” on your machine. Things that are encrypted with the public key can be be decrypted with the private key, but it is computationally intractable (ie, it would take on the order of thousands of years) to determine a private key from a public key. You can read more about it <a class="reference external" href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">here</a></li>
+<li>Create the RSA Key Pair on your laptop/computer:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa
+</pre></div>
+</div>
+<ul class="simple">
+<li>Store the Keys and Passphrase. Once you have entered the Gen Key command, you will get a few more questions:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+</pre></div>
+</div>
+<ul class="simple">
+<li>You can press enter here, saving the file to the user home (in this case, my example user is called demo).</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Enter passphrase (empty for no passphrase):
+</pre></div>
+</div>
+<ul class="simple">
+<li>It’s up to you whether you want to use a passphrase though we recommend NOT to!.</li>
+<li>The public key is now located in /home/demo/.ssh/id_rsa.pub. The private key (identification) is now located in /home/demo/.ssh/id_rsa</li>
+<li>Copy the Public Key</li>
+<li>Once the key pair is generated, it’s time to place the public key on the server that we want to use.</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<ul class="simple">
+<li>Copy all of the text that constitutes your public key and we will place it in our Atmosphere accounts.</li>
+<li>You are now ready to deposit your generated public key onto your Atmosphere account, to gain secure login each time you build and use an instance on Atmosphere.</li>
+<li>Click on your username on the Atmosphere page and navigate to ‘Settings’ page</li>
+</ul>
+<p><img alt="_images/settings.png" src="_images/settings.png" /></p>
+<ul class="simple">
+<li>Scroll down to the advanced section and click on ‘Show More’</li>
+</ul>
+<p><img alt="_images/settings_advanced.png" src="_images/settings_advanced.png" /></p>
+<ul class="simple">
+<li>In the ‘SSH Configuration’ section, click on the ‘+’ sign</li>
+</ul>
+<p><img alt="_images/settings_ssh.png" src="_images/settings_ssh.png" /></p>
+<ul class="simple">
+<li>Paste your public key generated earlier and give this key a name</li>
+</ul>
+<p><img alt="_images/settings_deposit_key.png" src="_images/settings_deposit_key.png" /></p>
+<ul class="simple">
+<li><strong>You can now securely login to all the instances you launch on Atmosphere without having to type your password each-time you ssh login.</strong></li>
+</ul>
+<p><img alt="_images/ssh_no_pass.png" src="_images/ssh_no_pass.png" /></p>
+</div>
+<div class="section" id="tmux-screen">
+<h1>15. Tmux &amp; Screen<a class="headerlink" href="#tmux-screen" title="Permalink to this headline">¶</a></h1>
+<p>Have you ever faced the situation where you perform a long-running task on a remote machine and suddenly your connection drops, the SSH session is terminated and your work is lost. Well it has happened to all of us at some point, hasn’t it? Luckily, there are utilities like <a class="reference external" href="https://linuxize.com/post/getting-started-with-tmux/#what-is-tmux">Tmux</a> &amp; <a class="reference external" href="https://linuxize.com/post/how-to-use-linux-screen/">Screen</a> that allow us to the resume our sessions.</p>
+</div>
+<div class="section" id="ssh-remote-host-id-changed-error">
+<h1>16. SSH Remote host ID Changed Error<a class="headerlink" href="#ssh-remote-host-id-changed-error" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>When we suspend an instance and re-start it, the IP address might change. But, when two instances get the same address this login-error might pop-up</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ECDSA key sent by the remote host is
+SHA256:6vr1EYq1C1DJnWEoE9k2gfbaXUhsEM2iF9jKuhfNs2o.
+Please contact your system administrator.
+Add correct host key in /home/sateeshp/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/sateeshp/.ssh/known_hosts:9
+  remove with:
+  ssh-keygen -f &quot;/home/sateeshp/.ssh/known_hosts&quot; -R &quot;128.196.142.26&quot;
+ECDSA host key for 128.196.142.26 has changed and you have requested strict checking.
+Host key verification failed.
+</pre></div>
+</div>
+<ul class="simple">
+<li>Executing the ssh-keygen -f command as above will delete the conflicting key the known_hosts file.</li>
+</ul>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="DE.html" title="previous chapter (use the left arrow)">10. Differential expression analysis with DESeq2</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="backup.html" title="next chapter (use the right arrow)">17. Backup files</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="backup.html" title="17. Backup files"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DE.html" title="10. Differential expression analysis with DESeq2"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="toc.html">2019-UNR-omics 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2019, Elias Oziolor, Sateesh Peri. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
